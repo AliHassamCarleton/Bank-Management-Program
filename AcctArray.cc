@@ -24,14 +24,14 @@ AcctArray::AcctArray()
 
 int AcctArray::getSize() { return size; }
 
-Account& AcctArray::get(int index)
+Account* AcctArray::get(int index)
 {
   if (index < 0 || index >= size)
     exit(1);
   return elements[index];
 }
 
-void AcctArray::add(Account& cust)
+void AcctArray::add(Account* cust)
 {
   if (size >= MAX_ARR)
     return;

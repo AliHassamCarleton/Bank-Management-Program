@@ -21,11 +21,11 @@ class AcctArray
 {
   public:
     AcctArray();
-    void add(Account&);
-    Account& get(int);
+    void add(Account*);
+    Account* get(int);
     int getSize();
   private:
-    Account elements[MAX_ARR];
+    Account* elements[MAX_ARR];
     int size;
 };
 

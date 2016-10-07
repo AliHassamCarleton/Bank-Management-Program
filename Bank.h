@@ -21,7 +21,7 @@ using namespace std;
 class Bank
 {
   public:
-    void       addAcct(Account&);
+    void       addAcct(Account*);
     void       addCust(Customer*);
     AcctArray& getAccounts();
     CustArray& getCustomers();
