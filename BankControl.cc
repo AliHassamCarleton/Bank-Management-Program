@@ -48,11 +48,12 @@ void BankControl::processAdmin()
     choice = -1;
     view.adminMenu(choice);
      if (choice == 1) {		// add account
-    // view.readCustId(custId);
-    // view.readAcctType(acctType);
-    // Account acct(custId, acctType);
-    // bank.addAcct(acct);
-    // view.pause();
+       view.readCustId(custId);
+       view.readAcctType(acctType);
+       Account* newAccount;
+       newAccount= new Account(custId, acctType);
+       bank.addAcct(newAccount);
+       view.pause();
     }
     else if (choice == 2) {	// print accounts
       view.printAccounts(bank);
