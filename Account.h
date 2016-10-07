@@ -19,7 +19,7 @@ using namespace std;
 class Account
 {
   public:
-    Account(int=0, AcctType=GENERAL);
+    Account(Customer=NULL, AcctType=GENERAL);
     AcctType   getAcctType();
     int        getAcctNum();
     int        getCust();

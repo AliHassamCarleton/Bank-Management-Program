@@ -16,11 +16,11 @@ using namespace std;
 
 int Account::nextAcctNum = 7001;
 
-Account::Account(int c, AcctType t) 
+Account::Account(Customer* c, AcctType t) 
 { 
   acctNum  = nextAcctNum++;
   acctType = t;
-  cust     = c;
+  cust     = c->getCustId;
   balance  = 0;
 }
 
