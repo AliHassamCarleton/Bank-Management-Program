@@ -46,7 +46,7 @@ string CustArray::idtoName(int custNum){
 
   for (int i=0; i<size; i++){
 
-    if(custNum==elements[i].getCustId()){
+    if(custNum==elements[i]->getCustId()){
       return elements[i]->getCustName();
     }
   }

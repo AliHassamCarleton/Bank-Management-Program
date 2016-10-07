@@ -80,20 +80,20 @@ void View::printAccounts(Bank& bank)
 
   for (int i=0; i<bank.getAccounts().getSize(); i++) {
 
-    Account& acct = bank.getAccounts().get(i);
+    Account* acct = bank.getAccounts().get(i);
 
 
-    if (acct.getAcctType() == CHEQUING)
+    if (acct->getAcctType() == CHEQUING)
       cout << "Chequing:  ";
-    else if (acct.getAcctType() == SAVINGS)
+    else if (acct->getAcctType() == SAVINGS)
       cout << "Savings:   ";
     else
       cout << "General:   ";
 
-    cout << acct.getAcctNum() << "  " << setw(4) <<  bank.getCustomers().idtoName(acct.getCust()) << "  ";
+    cout << acct->getAcctNum() << "  " << setw(4) <<  bank.getCustomers().idtoName(acct->getCust()) << "  ";
 
 
-    ss << setw(8) << fixed << setprecision(2) << acct.getBalance();
+    ss << setw(8) << fixed << setprecision(2) << acct->getBalance();
     cout << "  $" << ss.str() << endl;
     ss.str("");
   }
@@ -110,9 +110,9 @@ void View::printCustomers(Bank& bank)
 
   for (int i=0; i<bank.getCustomers().getSize(); i++){
 
-    Customer& cust= bank.getCustomers().get(i);
+    Customer* cust= bank.getCustomers().get(i);
 
-    cout << cust.getCustName() << "  " << setw(4) << cust.getCustId() << " \n ";
+    cout << cust->getCustName() << "  " << setw(4) << cust->getCustId() << " \n ";
 
   }
 }
