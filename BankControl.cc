@@ -19,6 +19,19 @@ BankControl::BankControl()
   init();
 }
 
+BankControl::~BankControl(){
+
+  for (int i=0; i<bank.getCustomers().getSize(); i++){
+    delete bank.getCustomers().get(i);
+  }
+  for (int i=0; i<bank.getAccounts().getSize(); i++){
+    delete bank.getAccounts().get(i);
+  }
+
+
+}
+
+
 void BankControl::launch()
 {
   int choice;
@@ -120,7 +133,7 @@ void BankControl::init()
   newCustomer= new Customer(1008, "Alec");
   bank.addCust(newCustomer);
 
-  newCustomer= new Customer(1009, "Saneer");
+  newCustomer= new Customer(1009, "Sameer");
   bank.addCust(newCustomer);
 
   newCustomer= new Customer(1010, "Ronaldo");
