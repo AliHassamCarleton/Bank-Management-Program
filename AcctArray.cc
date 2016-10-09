@@ -39,11 +39,11 @@ void AcctArray::add(Account* cust)
   elements[size++] = cust;
 }
 
-float AcctArray::idtoBalance(int custNum){
+float AcctArray::accounttoBalance(int acctNum){
 
   for (int i=0; i<size; i++){
 
-    if(custNum==elements[i]->getCust()){
+    if(acctNum==elements[i]->getAcctNum()){
       return elements[i]->getBalance();
     }
   }

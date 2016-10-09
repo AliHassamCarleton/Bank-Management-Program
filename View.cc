@@ -125,10 +125,10 @@ void View::accountToBalance(Bank& bank){
   cout<< "Enter your account number"<< endl;
   choice = readInt();
 
-  if (bank.getAccounts().idtoBalance(choice)<0)
+  if (bank.getAccounts().accounttoBalance(choice)<0)
 	printError("Sorry, your account was not found");
   else
-  	printBalance(bank.getAccounts().idtoBalance(choice));
+  	printBalance(bank.getAccounts().accounttoBalance(choice));
 
 }
 

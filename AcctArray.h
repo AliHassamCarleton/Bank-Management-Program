@@ -24,7 +24,7 @@ class AcctArray
     void add(Account*);
     Account* get(int);
     int getSize();
-    float idtoBalance(int);
+    float accounttoBalance(int);
   private:
     Account* elements[MAX_ARR];
     int size;
