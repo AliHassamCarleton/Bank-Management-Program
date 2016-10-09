@@ -15,12 +15,13 @@ using namespace std;
 #define ACCOUNT_H
 
 #include "defs.h"
+#include "Customer.h"
 
 class Account
 {
   public:
-    Account(Customer=NULL, AcctType=GENERAL);
     AcctType   getAcctType();
+    Account    (Customer* =NULL, AcctType= GENERAL);
     int        getAcctNum();
     int        getCust();
     float      getBalance();
