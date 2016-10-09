@@ -117,6 +117,19 @@ void View::printCustomers(Bank& bank)
   }
 }
 
+void View::accountToBalance(Bank& bank){
+
+  int choice;
+  float balance;
+
+  cout<< "Enter your account number"<< endl;
+  choice = readInt();
+
+  printBalance(bank.getAccounts().idtoBalance(choice));
+
+}
+
+
 void View::printBalance(float b)
 {
   // The stringstream class helps us convert from numeric values to string.

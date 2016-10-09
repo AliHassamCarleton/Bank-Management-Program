@@ -27,6 +27,7 @@ class View
     void readCustId(int&);
     void readAcctType(AcctType&);
     void printAccounts(Bank&);
+    void accountToBalance(Bank&);
     void printCustomers(Bank&);
     void printBalance(float);
     void printError(string);

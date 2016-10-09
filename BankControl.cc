@@ -90,7 +90,8 @@ void BankControl::processCust()
     choice = -1;
     view.custMenu(choice);
     if (choice == 1) {	// check balance
-      view.printError("Feature not yet implemented");
+    	view.accountToBalance(bank);
+      
     }
     else {
       break;
