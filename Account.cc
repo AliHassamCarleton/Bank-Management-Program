@@ -20,7 +20,7 @@ Account::Account(Customer* c, AcctType t)
 { 
   acctNum  = nextAcctNum++;
   acctType = t;
-  cust     = c->getCustId;
+  cust     = c->getCustId();
   balance  = 0;
 }
 

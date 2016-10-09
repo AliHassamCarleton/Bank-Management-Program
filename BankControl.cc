@@ -112,96 +112,95 @@ void BankControl::init()
   //Dynamically add the new customers
   newCustomer= new Customer(1001, "Timmy");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
+
 
   newCustomer= new Customer(1002, "Lebron");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1003, "James");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1004, "John");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1005, "Cena");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1006, "Jasper");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1007, "Eddie");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1008, "Alec");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1009, "Sameer");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1010, "Ronaldo");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1011, "Howard");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1012, "Ron");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1013, "Harry");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, CHEQUING);
+  bank.addAcct(newAccount);
 
   newCustomer= new Customer(1014, "Lilly");
   bank.addCust(newCustomer);
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
+
 
   newCustomer= new Customer(1015, "Keiffer");
   bank.addCust(newCustomer);
-
+  newAccount= new Account(newCustomer, SAVINGS);
+  bank.addAcct(newAccount);
 
 
   //Dynamically add the new accounts
-  newAccount= new Account(1001, SAVINGS);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1002, SAVINGS);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1003, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1004, SAVINGS);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1005, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1006, SAVINGS);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1007, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1008, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1009, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1010, SAVINGS);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1011, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1012, CHEQUING);
-  bank.addAcct(newAccount);
 
-  newAccount= new Account(1013, CHEQUING);
-  bank.addAcct(newAccount);
-
-  newAccount= new Account(1014, SAVINGS);
-  bank.addAcct(newAccount);
-
-  newAccount= new Account(1015, SAVINGS);
-  bank.addAcct(newAccount);
 
 
 
