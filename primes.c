@@ -75,10 +75,10 @@ int main ()
 
   /* wait for the thread to complete, 
      place the result at location pointed by "&iPrime and &jPrime"  */
-  pthread_join (threadI, (void*) &iPrime);
-  pthread_join (threadJ, (void*) &jPrime);
+  pthread_join (threadI, NULL);
+  pthread_join (threadJ, NULL);
 
   /* print the computed prime */
-  printf("i Prime= %d and j Prime is %d.\n i Prime* j Prime is %d.\n", iPrime, jPrime, iPrime * jPrime);
+  printf("i Prime= %d and j Prime is %d.\n i Prime* j Prime is %d.\n", primeNums[0], primeNums[1], primeNums[0] * primeNums[1]);
   return 0;
 }
