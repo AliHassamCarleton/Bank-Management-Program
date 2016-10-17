@@ -1,6 +1,6 @@
 //Ali Hassam
-//Comp 3000 Exercise 4
-//Due: October 9 2016
+//Comp 3000 Exercise 5
+//Due: October 16 2016
 
 #include <pthread.h>
 #include <stdio.h>
@@ -11,9 +11,9 @@
    Return the nth prime number, n is the value pointed by *arg.  */
 
 //Global declared 
-int primeNums[2];
-int i= 0; 
 pthread_mutex_t lckThread;
+int primeNums[2];
+int i=0; 
 
 void* compute_prime (void* arg)
 {
@@ -25,18 +25,19 @@ void* compute_prime (void* arg)
     int is_prime = true;
 
     /* test primality by successive division.  */
-    for (factor = 2; factor < candidate; ++factor)
+    for (factor = 2; factor < candidate; ++factor){
       if (candidate % factor == 0) {
         is_prime = false;
         break;
       }
+    }
     /* is prime number we're looking for?  */
     if (is_prime) {
       if (--n == 0){
         /* cast the prime to void* and return  */
         pthread_mutex_lock(&lckThread);
-		primeNums[i++] = candidate;
-		pthread_mutex_unlock(&lckThread);
+		    primeNums[i++] = candidate;
+	     	pthread_mutex_unlock(&lckThread);
         return(NULL);
    	 }	
     }
