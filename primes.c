@@ -39,6 +39,7 @@ void* compute_prime (void* arg)
 		    primeNums[i++] = candidate;
 	     	pthread_mutex_unlock(&lckThread);
         return(NULL);
+        
    	 }	
     }
     ++candidate;
