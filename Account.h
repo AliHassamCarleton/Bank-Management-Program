@@ -1,0 +1,36 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * */
+/*                                                 */
+/*  Program:  Simple Banking System                */
+/*  Author:   Christine Laurendeau                 */
+/*  Date:     08-JUN-2016                          */
+/*                                                 */
+/*  (c) 2016 Christine Laurendeau                  */
+/*  All rights reserved.  Distribution and         */
+/*  reposting, in part or in whole, without the    */
+/*  written consent of the author, is illegal.     */
+/*                                                 */
+/* * * * * * * * * * * * * * * * * * * * * * * * * */
+using namespace std;
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
+
+#include "defs.h"
+#include "Customer.h"
+
+class Account
+{
+  public:
+    AcctType   getAcctType();
+    Account    (Customer* =NULL, AcctType= GENERAL);
+    int        getAcctNum();
+    int        getCust();
+    float      getBalance();
+  protected:
+    static int nextAcctNum;
+    AcctType   acctType;
+    int        acctNum;
+    int        cust;
+    float      balance;
+};
+
+#endif
