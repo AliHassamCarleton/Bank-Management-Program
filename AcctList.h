@@ -19,7 +19,8 @@ class AcctList
     ~AcctList();
     void add(Account*);
     void del(Account*);
-    void print();
+    bool find(Account*);
+    //void print();
 
   private:
     Node* head;

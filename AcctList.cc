@@ -4,12 +4,13 @@ using namespace std;
 
 #include "List.h"
 
-List::List()
+AcctList::AcctList()
 {
   head = NULL;
+  tail= NULL;
 }
 
-List::~List()
+AcctList::~AcctList()
 {
   Node* currNode;
   Node* nextNode;
@@ -23,19 +24,19 @@ List::~List()
   }
 }
 
-void List::del(Student* stu)
+void AcctList::del(Account* acc)
 {
   Node* currNode = head;
   Node* prevNode = NULL;
 
   while (currNode != NULL) {
-    if (currNode->data->getName() == stu->getName())
+    if (currNode->data->getAcctNum() == acct->getAcctNum())
       break;
     prevNode = currNode;
     currNode = currNode->next;
   }
 
-  if (currNode == NULL)
+  if (currNode == NULL)//empty list
     return;
 
   if (prevNode == NULL) {
@@ -45,42 +46,60 @@ void List::del(Student* stu)
     prevNode->next = currNode->next;
   }
 
+  if(prevNode->next==NULL)
+    tail=prevNode;
+
   delete currNode;
 
 
 }
 
-void List::add(Account* acc)
+void AcctList::add(Account* acc)
 {
   Node* currNode;
-  Node* prevNode;
   Node* newAcctNode;
 
   newAcctNode = new Node;
   newAcctNode->data = acc;
   newAcctNode->next = NULL;
 
-  currNode = head;
-  prevNode = NULL;
+  currNode = tail;
 
-
-  if (prevNode == NULL) {
-    head = newAcctNode;
-  } 
-  else {
-    prevNode->next= newAcctNode;
+  if (currNode==NULL){//list is empty
+    head= newAcctNode;
+  }
+  else{
+     currNode->next=newAcctNode;
   }
 
-  newStuNode->next = currNode;
+  tail= newAcctNode;
 
 }
 
-void List::print()
-{
-  Node* currNode = head;
+bool AcctList::find(Account* acc){
+  
+  Node* currNode;
+  currNode=head;
 
-  while (currNode  != NULL) {
-    currNode->data->print();
-    currNode = currNode->next;
+  while (currNode!=NULL){
+
+    if(currNode->data->getAcctNum() == acct->getAcctNum()){
+
+      return true;
+
+    }
   }
+
+  return false;
+
+}
+
+// void List::print()
+// {
+//   Node* currNode = head;
+
+//   while (currNode  != NULL) {
+//     currNode->data->print();
+//     currNode = currNode->next;
+//   }
 }
