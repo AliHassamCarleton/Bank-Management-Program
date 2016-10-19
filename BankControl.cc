@@ -62,7 +62,7 @@ void BankControl::processAdmin()
        view.readAcctType(acctType);
        Account* newAccount;
        Customer* newCustomer;
-       newCustomer= new Customer(custId, " ");
+       newCustomer= new Customer(custId, bank.getCustomers().idtoName(custId));
        newAccount= new Account(newCustomer, acctType);
        bank.addAcct(newAccount);
        view.pause();
@@ -78,6 +78,7 @@ void BankControl::processAdmin()
     else if (choice == 4) { // remove account
       view.readAcctNum(accountNum);
       bank.remAcct(accountNum);
+			view.pause();
     }     
     else {
       break;
