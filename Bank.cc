@@ -34,6 +34,20 @@ void Bank::addAcct(Account *acct)
 
 }
 
+
+void Bank::remAcct(int accountNum)
+{
+  if (accounts.isExisting(accountNum)==true){
+  	accounts.del(accountNum);
+  }
+  else{
+	cout << "Sorry, your account number was not found  ";
+  }
+
+}
+
+
+
 void Bank::addCust(Customer* cust)
 {
   customers.add(cust);

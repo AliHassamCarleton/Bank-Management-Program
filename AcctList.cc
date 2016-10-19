@@ -94,6 +94,27 @@ void AcctList::add(Account* acc)
 
 }
 
+bool AcctList::isExisting(int accountNum){
+
+  Node* currNode;
+	currNode=head;
+
+	while(currNode!=NULL){
+	
+		if(accountNum==currNode->data->getAcctNum()){
+			return true;
+		}
+
+		currNode=currNode->next;
+
+	}
+
+	return false;
+}
+
+
+
+
 float AcctList::accounttoBalance(int acctNum){
 
 

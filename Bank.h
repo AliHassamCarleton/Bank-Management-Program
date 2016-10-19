@@ -22,6 +22,7 @@ class Bank
 {
   public:
     void       addAcct(Account*);
+		void			 remAcct(int);
     void       addCust(Customer*);
     AcctList& getAccounts();
     CustArray& getCustomers();

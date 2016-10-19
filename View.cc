@@ -45,9 +45,10 @@ void View::adminMenu(int& choice)
   cout<< "          1. Add account \n\n";
   cout<< "          2. Print accounts \n\n";
   cout<< "          3. Print customers \n\n";  
+  cout<< "          4. Remove account \n\n";  
   cout<< "          0. Exit\n\n";
 
-  while (choice < 0 || choice > 3) {
+  while (choice < 0 || choice >4) {
     cout << "Enter your selection:  ";
     choice = readInt();
   }
@@ -144,6 +145,17 @@ void View::readCustId(int& id)
   getline(cin, str);
   stringstream ss(str);
   ss >> id;
+}
+
+
+void View::readAcctNum(int& acctNum)
+{
+  string str;
+
+  cout << "Account number: ";
+  getline(cin, str);
+  stringstream ss(str);
+  ss >> acctNum;
 }
 
 void View::readAcctType(AcctType& acctType)

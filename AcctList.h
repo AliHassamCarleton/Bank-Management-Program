@@ -19,6 +19,7 @@ class AcctList
     ~AcctList();
     void add(Account*);
     void del(int);
+		bool isExisting(int);
     float accounttoBalance(int);
     void toString(string&);
 

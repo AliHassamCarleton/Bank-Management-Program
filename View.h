@@ -25,6 +25,7 @@ class View
     void adminMenu(int&);
     void custMenu(int&);
     void readCustId(int&);
+		void readAcctNum(int&);
     void readAcctType(AcctType&);
     void printAccounts(Bank&);
     void accountToBalance(Bank&);

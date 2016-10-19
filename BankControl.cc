@@ -51,6 +51,7 @@ void BankControl::processAdmin()
 {
   int      choice;
   int      custId;
+	int 		 accountNum;
   AcctType acctType;
 
   while (1) {
@@ -73,7 +74,11 @@ void BankControl::processAdmin()
     else if (choice == 3) { // print customers
       view.printCustomers(bank);
       view.pause();
-    }    
+    }
+    else if (choice == 4) { // remove account
+      view.readAcctNum(accountNum);
+      bank.remAcct(accountNum);
+    }     
     else {
       break;
     }
