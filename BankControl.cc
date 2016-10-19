@@ -24,6 +24,10 @@ BankControl::~BankControl(){
   for (int i=0; i<bank.getCustomers().getSize(); i++){
     delete bank.getCustomers().get(i);
   }
+  for (int i=0; i<bank.getAccounts().getSize(); i++){
+    delete bank.getAccounts().get(i);
+  }
+
 
 }
 

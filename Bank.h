@@ -15,7 +15,7 @@ using namespace std;
 #ifndef BANK_H
 #define BANK_H
 
-#include "AcctList.h"
+#include "AcctArray.h"
 #include "CustArray.h"
 
 class Bank
@@ -23,10 +23,10 @@ class Bank
   public:
     void       addAcct(Account*);
     void       addCust(Customer*);
-    AcctList& getAccounts();
+    AcctArray& getAccounts();
     CustArray& getCustomers();
   private:
-    AcctList  accounts;
+    AcctArray  accounts;
     CustArray  customers;
 };
 

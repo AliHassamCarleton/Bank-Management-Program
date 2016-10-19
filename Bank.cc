@@ -18,7 +18,7 @@ using namespace std;
 #include <sstream>
 #include "Bank.h"
 
-AcctList& Bank::getAccounts() { return accounts; }
+AcctArray& Bank::getAccounts() { return accounts; }
 CustArray& Bank::getCustomers() { return customers; }
 
 
