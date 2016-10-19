@@ -2,16 +2,15 @@
 #include <string>
 using namespace std;
 
-#include "List.h"
+#include "AcctList.h"
 
-AcctList::AcctList()
+List::List()
 {
-  size=0;
-  head = NULL;
+  head= NULL;
   tail= NULL;
 }
 
-AcctList::~AcctList()
+List::~List()
 {
   Node* currNode;
   Node* nextNode;
@@ -20,24 +19,25 @@ AcctList::~AcctList()
 
   while (currNode!= NULL) {
     nextNode = currNode->next;
+    delete currNode->data;
     delete currNode;
     currNode = nextNode;
   }
 }
 
-void AcctList::del(Account* acc)
+void List::del(int acctNum)
 {
   Node* currNode = head;
   Node* prevNode = NULL;
 
   while (currNode != NULL) {
-    if (currNode->data->getAcctNum() == acct->getAcctNum())
+    if (currNode->data->getAcctNum() == acctNum)
       break;
     prevNode = currNode;
     currNode = currNode->next;
   }
 
-  if (currNode == NULL)//empty list
+  if (currNode == NULL)//nothing found
     return;
 
   if (prevNode == NULL) {
@@ -47,7 +47,7 @@ void AcctList::del(Account* acc)
     prevNode->next = currNode->next;
   }
 
-  if(prevNode->next==NULL)
+  if (currNode->next==NULL)
     tail=prevNode;
 
   delete currNode;
@@ -55,54 +55,56 @@ void AcctList::del(Account* acc)
 
 }
 
-void AcctList::add(Account* acc)
+void List::add(Account* acc)
 {
   Node* currNode;
-  Node* newAcctNode;
+  Node* prevNode;
+  Node* newAccNode;
 
-  newAcctNode = new Node;
-  newAcctNode->data = acc;
-  newAcctNode->next = NULL;
+  newAccNode = new Node;
+  newAccNode->data = acc;
+  newAccNode->next = NULL;
 
-  currNode = tail;
+  currNode = head;
+  prevNode = NULL;
 
-  if (currNode==NULL){//list is empty
-    head= newAcctNode;
+  while (currNode != NULL) {
+    if (acc->getAcctNum() < currNode->data->getAcctNum())
+      break;
+    prevNode= currNode;
+    currNode = currNode->next;
   }
-  else{
-     currNode->next=newAcctNode;
-  }
 
-  tail= newAcctNode;
-  size++;
+  if (prevNode == NULL) {
+    head = newAccNode;
+  } 
+  else {
+    prevNode->next = newAccNode;
+  }
+  newAccNode->next = currNode;
+
+  if(currNode==NULL)
+    tail=newAccNode;
 
 }
 
-Account AcctList::get(int index){
-  
+float AcctList::accounttoBalance(int acctNum){
+
+
   Node* currNode;
-  currNode=head;
-  int count=0;
+  currNode = head;
 
-  while (currNode!=NULL){
+  while (currNode != NULL) {
 
-    if(count == index){
-      return currNode->data;
+    if(acctNum==currNode->data->getAcctNum()){
+      return currNode->data->getBalance();
     }
+	
     currNode=currNode->next;
-    count++;
   }
-  
+  return -1;
 }
 
-int AcctList::getSize() { return size; }
 
-// void List::print()
-// {
-//   Node* currNode = head;
-
-//   while (currNode  != NULL) {
-//     currNode->data->print();
-//     currNode = currNode->next;
-//   }
 }
+

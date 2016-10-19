@@ -19,9 +19,7 @@ class AcctList
     ~AcctList();
     void add(Account*);
     void del(Account*);
-    Account get(Account*);
-    int getSize();
-    //void print();
+    float accounttoBalance(int);
 
   private:
     Node* head;
