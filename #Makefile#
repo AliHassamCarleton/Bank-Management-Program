@@ -1,3 +1,5 @@
+
+
 OBJ = main.o BankControl.o Bank.o Account.o View.o AcctList.o Customer.o CustArray.o
 
 bsys:	$(OBJ)
