@@ -6,6 +6,7 @@ using namespace std;
 
 AcctList::AcctList()
 {
+  size=0;
   head = NULL;
   tail= NULL;
 }
@@ -73,26 +74,28 @@ void AcctList::add(Account* acc)
   }
 
   tail= newAcctNode;
+  size++;
 
 }
 
-bool AcctList::find(Account* acc){
+Account* AcctList::get(int index){
   
   Node* currNode;
   currNode=head;
+  int count=0;
 
   while (currNode!=NULL){
 
-    if(currNode->data->getAcctNum() == acct->getAcctNum()){
-
-      return true;
-
+    if(count == index){
+      return currNode->data;
     }
+    currNode=currNode->next;
+    count++;
   }
-
-  return false;
-
+  
 }
+
+int AcctList::getSize() { return size; }
 
 // void List::print()
 // {

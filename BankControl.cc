@@ -28,6 +28,7 @@ BankControl::~BankControl(){
     delete bank.getAccounts().get(i);
   }
 
+
 }
 
 

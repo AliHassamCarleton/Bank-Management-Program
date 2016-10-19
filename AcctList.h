@@ -19,7 +19,7 @@ class AcctList
     ~AcctList();
     void add(Account*);
     void del(Account*);
-    bool find(Account*);
+    Account* get(Account*);
     //void print();
 
   private:
