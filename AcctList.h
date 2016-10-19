@@ -19,7 +19,8 @@ class AcctList
     ~AcctList();
     void add(Account*);
     void del(Account*);
-    Account* get(Account*);
+    Account get(Account*);
+    int getSize();
     //void print();
 
   private:

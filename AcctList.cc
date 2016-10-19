@@ -78,7 +78,7 @@ void AcctList::add(Account* acc)
 
 }
 
-Account* AcctList::get(int index){
+Account AcctList::get(int index){
   
   Node* currNode;
   currNode=head;
