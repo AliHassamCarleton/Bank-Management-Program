@@ -6,14 +6,14 @@ using namespace std;
 #include "AcctList.h"
 
 
-List::List()
+AcctList::AcctList()
 {
   head= NULL;
   tail= NULL;
   size=0;
 }
 
-List::~List()
+AcctList::~AcctList()
 {
   Node* currNode;
   Node* nextNode;
@@ -28,7 +28,7 @@ List::~List()
   }
 }
 
-void List::del(int acctNum)
+void AcctList::del(int acctNum)
 {
   Node* currNode = head;
   Node* prevNode = NULL;
@@ -59,7 +59,7 @@ void List::del(int acctNum)
 
 
 
-void List::add(Account* acc)
+void AcctList::add(Account* acc)
 {
   Node* currNode;
   Node* prevNode;
@@ -109,7 +109,7 @@ float AcctList::accounttoBalance(int acctNum){
   return -1;
 }
 
-void toString(string& outStr){
+void AcctList::toString(string& outStr){
 
   Node* currNode;
   currNode = head;
@@ -131,12 +131,10 @@ void toString(string& outStr){
 
   }
 
-	
-
-
-}
-
-
+	outStr= oss.str();
 
 }
+
+
+
 

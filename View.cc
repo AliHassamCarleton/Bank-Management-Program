@@ -74,29 +74,15 @@ void View::printAccounts(Bank& bank)
   // The stringstream class helps us convert from numeric values to string.
   // The I/O manipulation functions help us make the output look pretty.
 
-  stringstream ss;
-
+	string stringData;
+ 
   cout << endl << "ACCOUNTS: " << endl;
 
-  for (int i=0; i<bank.getAccounts().getSize(); i++) {
+  bank.getAccounts().toString(stringData);
 
-    Account* acct = bank.getAccounts().get(i);
-
-
-    if (acct->getAcctType() == CHEQUING)
-      cout << "Chequing:  ";
-    else if (acct->getAcctType() == SAVINGS)
-      cout << "Savings:   ";
-    else
-      cout << "General:   ";
-
-    cout << acct->getAcctNum() << "  " << setw(4) <<  bank.getCustomers().idtoName(acct->getCust()) << "  ";
+	cout<<stringData;
 
 
-    ss << setw(8) << fixed << setprecision(2) << acct->getBalance();
-    cout << "  $" << ss.str() << endl;
-    ss.str("");
-  }
 }
 
 
