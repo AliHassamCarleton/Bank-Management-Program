@@ -21,11 +21,13 @@ Account::Account(Customer* c, AcctType t)
   acctNum  = nextAcctNum++;
   acctType = t;
   cust     = c->getCustId();
+	custName = c->getCustName();
   balance  = 0;
 }
 
 AcctType Account::getAcctType() { return acctType; }
 int      Account::getAcctNum()  { return acctNum;  }
 int      Account::getCust()     { return cust;     }
+string 	 Account::getCustName() { return custName; }
 float    Account::getBalance()  { return balance;  }
 

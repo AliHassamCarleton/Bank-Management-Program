@@ -23,13 +23,15 @@ class Account
     AcctType   getAcctType();
     Account    (Customer* =NULL, AcctType= GENERAL);
     int        getAcctNum();
-    int        getCust();
+    int        getCust();	
+		string		 getCustName();
     float      getBalance();
   protected:
     static int nextAcctNum;
     AcctType   acctType;
     int        acctNum;
     int        cust;
+		string 		 custName;
     float      balance;
 };
 

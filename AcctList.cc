@@ -1,6 +1,8 @@
 #include <iostream>
 #include <sstream> 
 #include <string>
+#include <iomanip>
+
 using namespace std;
 
 #include "AcctList.h"
@@ -124,8 +126,9 @@ void AcctList::toString(string& outStr){
     else
       oss << "General:   ";
 
-		oss <<currNode->data->getAcctNum() << " 	 " << currNode->data->getCust() << " 		 " <<
-		currNode->data->getBalance() <<"$\n";
+		oss <<currNode->data->getAcctNum() << "  " << currNode->data->getCustName();
+	  oss << setw(10) << fixed << setprecision(2) << currNode->data->getBalance();
+		oss << "$\n";
 
     currNode=currNode->next;
 
