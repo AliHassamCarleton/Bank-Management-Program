@@ -20,10 +20,12 @@ class AcctList
     void add(Account*);
     void del(Account*);
     float accounttoBalance(int);
+    void toString(string&);
 
   private:
     Node* head;
     Node* tail;
+    int size;
 
 };
 

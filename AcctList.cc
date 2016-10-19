@@ -1,13 +1,16 @@
 #include <iostream>
+#include <sstream> 
 #include <string>
 using namespace std;
 
 #include "AcctList.h"
 
+
 List::List()
 {
   head= NULL;
   tail= NULL;
+  size=0;
 }
 
 List::~List()
@@ -52,8 +55,9 @@ void List::del(int acctNum)
 
   delete currNode;
 
-
 }
+
+
 
 void List::add(Account* acc)
 {
@@ -104,6 +108,34 @@ float AcctList::accounttoBalance(int acctNum){
   }
   return -1;
 }
+
+void toString(string& outStr){
+
+  Node* currNode;
+  currNode = head;
+  ostringstream oss;
+
+  while (currNode != NULL) {
+	
+		if (currNode->data->getAcctType() == CHEQUING)
+			oss << "Chequing:  ";
+    else if(currNode->data->getAcctType() == SAVINGS)
+      oss << "Savings:   ";
+    else
+      oss << "General:   ";
+
+		oss <<currNode->data->getAcctNum() << " 	 " << currNode->data->getCust() << " 		 " <<
+		currNode->data->getBalance() <<"$\n";
+
+    currNode=currNode->next;
+
+  }
+
+	
+
+
+}
+
 
 
 }
