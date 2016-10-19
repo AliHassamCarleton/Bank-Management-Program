@@ -4,16 +4,16 @@ Alnoor Kara
 
 purpose:
 
-The purpose is to modify and create a bank management program using object oriented programming.
-This bank management program gives you the ability to add accounts, add customers, view the accounts and also view the customers.
+The purpose is to modify our existing bank management program using object oriented programming. For this assignment we deal with dynamically allocated memory in C++ using linked lists.  Implementing the Account array class now using a LinkedList rather than an array as well as also implementing a remove accounts feature.
+
 
 Source/Header/Data files:
 Defs.h
 Account.h
-AcctArray.h
+AcctList.h
 Bank.h
 BankControl.h
-CustArrat.h
+CustArray.h
 Customer.h
 <iostream>
 <iomanip>
@@ -30,8 +30,8 @@ operating instructions:
 
 The program upon launch will ask for input. You can either enter
 
-1: admin menu -> gives you the option to add accounts, view accounts or view customers
-2: Customer menu -> gives you the option to add customers which is not yet available
+1: admin menu -> gives you the option to add accounts, view accounts, view customers or remove accounts
+2: Customer menu -> gives you the option to check the balance of a customer.
 3: exit -> will exit the program
 
 
