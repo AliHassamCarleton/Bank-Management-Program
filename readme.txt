@@ -34,3 +34,6 @@ The program upon launch will ask for input. You can either enter
 2: Customer menu -> gives you the option to check the balance of a customer.
 3: exit -> will exit the program
 
+
+
+
