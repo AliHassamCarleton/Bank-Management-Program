@@ -25,11 +25,11 @@ CustArray& Bank::getCustomers() { return customers; }
 //with added functionality to verify the customer exists
 void Bank::addAcct(Account *acct)
 {
-  if ((customers.isExisting(acct->getCust()))==true)	{
+  if ((customers.isExisting(acct->getCust()))>-1)	{
   	accounts.add(acct);
   }
   else{
-	cout << "Sorry, your customer Id was not found  ";
+		cout << "Sorry, your customer Id was not found  ";
   }
 
 }

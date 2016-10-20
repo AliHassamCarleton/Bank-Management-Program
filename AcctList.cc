@@ -12,7 +12,6 @@ AcctList::AcctList()
 {
   head= NULL;
   tail= NULL;
-  size=0;
 }
 
 AcctList::~AcctList()

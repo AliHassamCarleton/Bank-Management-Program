@@ -19,14 +19,6 @@ BankControl::BankControl()
   init();
 }
 
-BankControl::~BankControl(){
-
-  for (int i=0; i<bank.getCustomers().getSize(); i++){
-    delete bank.getCustomers().get(i);
-  }
-
-}
-
 
 void BankControl::launch()
 {
@@ -59,13 +51,17 @@ void BankControl::processAdmin()
     view.adminMenu(choice);
     if (choice == 1) {		// add account
        view.readCustId(custId);
-       view.readAcctType(acctType);
-       Account* newAccount;
-       Customer* newCustomer;
-       newCustomer= new Customer(custId, bank.getCustomers().idtoName(custId));
-       newAccount= new Account(newCustomer, acctType);
-       bank.addAcct(newAccount);
-       view.pause();
+
+       if (bank.getCustomers().isExisting(custId)>-1){
+       		view.readAcctType(acctType);
+       		Account* newAccount;
+       		newAccount= new Account(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), acctType);
+       		bank.addAcct(newAccount);
+				}
+       else{
+					view.printIdErr();
+			 }
+       	view.pause();
     }
     else if (choice == 2) {	// print accounts
       view.printAccounts(bank);
@@ -78,7 +74,7 @@ void BankControl::processAdmin()
     else if (choice == 4) { // remove account
       view.readAcctNum(accountNum);
       bank.remAcct(accountNum);
-			view.pause();
+      view.pause();
     }     
     else {
       break;
@@ -94,8 +90,14 @@ void BankControl::processCust()
     choice = -1;
     view.custMenu(choice);
     if (choice == 1) {	// check balance
-    	view.accountToBalance(bank);
+    	
+			view.readAcctNum(choice);
       
+			if (bank.getAccounts().accounttoBalance(choice)<0)
+					view.printError("Sorry, your account was not found");
+  		else
+  				view.printBalance(bank.getAccounts().accounttoBalance(choice));
+
     }
     else {
       break;

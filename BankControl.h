@@ -22,7 +22,6 @@ class BankControl
 {
   public:
     BankControl();
-    ~BankControl();
     void launch();
   private:
     Bank bank;

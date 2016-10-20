@@ -11,10 +11,11 @@ class CustArray
 {
   public:
     CustArray();
+    ~CustArray();
     void add(Customer*);
     Customer* get(int);
     int getSize();
-    bool isExisting(int); 
+    int isExisting(int); 
     string idtoName(int);
 
   private:

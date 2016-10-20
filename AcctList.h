@@ -26,7 +26,6 @@ class AcctList
   private:
     Node* head;
     Node* tail;
-    int size;
 
 };
 
