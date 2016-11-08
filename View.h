@@ -26,6 +26,7 @@ class View
     void custMenu(int&);
     void readCustId(int&);
 		void readAcctNum(int&);
+		void readAmount(int&);
     void readAcctType(AcctType&);
     void printIdErr();
     void printAccounts(Bank&);

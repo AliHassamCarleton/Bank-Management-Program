@@ -19,7 +19,6 @@ void update(Transaction* trans){
 	transactions.add(trans);
 	
 
-
 }
 
 

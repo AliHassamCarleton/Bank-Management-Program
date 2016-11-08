@@ -2,10 +2,11 @@
 #include "Transaction.h"
 using namespace std;
 
-Transaction::Transaction(string d, int tid, int accnum, int am){
+int Account::nextTransId = 4000;
 
-	date=d;
-	transId= tid;
+Transaction::Transaction(int accnum, int am){
+
+	transId= nextTransId++;
 	accountNum= accnum;
 	amount= am;
 }

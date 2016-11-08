@@ -14,7 +14,7 @@ class Transaction{
 
 
 public:
-	Transaction(string="", int=0, int=0, int=0);
+	Transaction(int=0, int=0);
 	int getAmount();
 	int getAccountNum();
 	int getTransactionId();
@@ -25,6 +25,7 @@ public:
 private:
 	string date;
 	int transId;
+	static int nextTransId;
 	int accountNum;
 	int amount;
 

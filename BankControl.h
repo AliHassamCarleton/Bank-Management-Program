@@ -15,6 +15,8 @@ using namespace std;
 #define BANKCONTROL_H
 
 #include <string>
+#include "TransControl.h"
+#include "Transaction.h"
 #include "Bank.h"
 #include "View.h"
 
@@ -26,6 +28,7 @@ class BankControl
   private:
     Bank bank;
     View view;
+		TransControl transControl;
     void init();
     void processAdmin();
     void processCust();

@@ -31,3 +31,26 @@ int      Account::getCust()     { return cust;     }
 string 	 Account::getCustName() { return custName; }
 float    Account::getBalance()  { return balance;  }
 
+bool Account::deposit(int amount){
+
+	if (amount<0){
+		return false;
+	}
+	balance+= amount;
+	return true;
+
+}
+
+bool Account::withdraw(int amount){
+
+	if (amount<0)
+		return false;
+	else if (amount>balance)
+		return false;
+	else{
+		balance-=amount;	
+		return true;
+	}
+
+}
+
