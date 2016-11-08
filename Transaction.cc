@@ -28,7 +28,8 @@ Transaction::Transaction(int accnum, int am, int type, bool result){
 
 
 
-void   	 Transaction::setDate(string d)  { date=d;  					}
+void   	 Transaction::setDate(string d)  { date=d;  					    }
+string	 Transaction::getDate()					 { return date;						}
 int      Transaction::getTransactionId() { return transId;    		}
 int      Transaction::getAccountNum()    { return accountNum;    	}
 int      Transaction::getAmount()    	 	 { return amount;    			}

@@ -42,7 +42,7 @@ void AcctList::del(int acctNum)
   }
 
   if (currNode == NULL)//nothing found
-    return;
+    return;  ostringstream oss;
 
   if (prevNode == NULL) {
     head = currNode->next;

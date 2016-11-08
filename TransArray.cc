@@ -1,5 +1,10 @@
 #include <string>
 #include <cstdlib>
+#include <iostream>
+#include <sstream> 
+#include <iomanip>
+
+
 using namespace std;
 
 #include "TransArray.h"
@@ -20,8 +25,12 @@ TransArray::~TransArray()
 
 void TransArray::toString(string& outStr){
 
-	for (int i=0; i<size; i++){
+  ostringstream oss;
 
+
+	for (int i=0; i<size; i++){
+		
+		oss<<elements[i]->getTransactionId()<< "  " <<elements[i]->getAccountNum()<< "  "<< elements[i]->getAmount() 
 
 
 

@@ -18,6 +18,7 @@ public:
 	int getAmount();
 	int getAccountNum();
 	int getTransactionId();
+	string getDate();
 	void setDate(string);
 
 
