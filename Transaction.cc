@@ -4,11 +4,18 @@ using namespace std;
 
 int Transaction::nextTransId = 4000;
 
-Transaction::Transaction(int accnum, int am){
+Transaction::Transaction(int accnum, int am, int type, bool result){
 
 	transId= nextTransId++;
 	accountNum= accnum;
 	amount= am;
+	TransType=type;
+
+	if (result==true)
+		TransState=1;
+	else
+		TransState=2;
+		
 }
 
 

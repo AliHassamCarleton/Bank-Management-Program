@@ -76,6 +76,15 @@ void BankControl::processAdmin()
       bank.remAcct(accountNum);
       view.pause();
     }     
+    else if (choice == 5) { // print transactions
+			TransArray transArray;
+      transControl.retrieve(transArray);
+			view.printTransactions
+
+
+
+      view.pause();
+    }     
     else {
       break;
     }
@@ -119,12 +128,13 @@ void BankControl::processCust()
 
 					if(result==true){
 						view.printError("Your transaction was succesful.");
-						Transaction* newTransaction;
-						newTransaction= new Transaction(acc,amount);
-						transControl.update(newTransaction);
+					else
+						view.printError("Your transaction failed.  Make sure the amount you entered was valid");
 
-					}else
-						view.printError("Your transaction failed.  Make sure the amount you entered was valid");	
+					Transaction* newTransaction;
+					newTransaction= new Transaction(acc,amount,choice-1,result);
+					transControl.update(newTransaction);
+	
 
     	}
 		}

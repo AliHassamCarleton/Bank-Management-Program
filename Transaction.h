@@ -14,7 +14,7 @@ class Transaction{
 
 
 public:
-	Transaction(int=0, int=0);
+	Transaction(int=0, int=0, int=1, bool=false);
 	int getAmount();
 	int getAccountNum();
 	int getTransactionId();

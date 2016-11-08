@@ -17,7 +17,7 @@ void TransControl:: update(Transaction* trans){
 	getTime(date);
 	trans->setDate(date);
 	transactions.add(trans);
-	
+	TransType
 
 }
 
