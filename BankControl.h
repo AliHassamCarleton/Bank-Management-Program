@@ -15,6 +15,8 @@ using namespace std;
 #define BANKCONTROL_H
 
 #include <string>
+#include "TransControl.h"
+#include "Transaction.h"
 #include "Bank.h"
 #include "View.h"
 

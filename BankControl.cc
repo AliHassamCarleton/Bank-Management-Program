@@ -87,6 +87,7 @@ void BankControl::processCust()
   int choice;
 	int acc;
 	int amount;
+	bool result;
 
   while (1) {
     choice = -1;
@@ -102,7 +103,7 @@ void BankControl::processCust()
   				view.printBalance(bank.getAccounts().accounttoBalance(choice));
 
     }
-    else if (choice == 2 ) {	//deposit
+    else if (choice == 2 || choice==3) {	//deposit or withdraw
     	
 			view.readAcctNum(acc);
       
@@ -111,31 +112,24 @@ void BankControl::processCust()
   		else{
 					view.readAmount(amount);
 
-					if (choice==2)
+					if (choice==2)//deposit
+						result= bank.getAccounts().numtoAccount(acc).deposit(amount);
+					else if (choice==3)//withdraw
+						result= bank.getAccounts().numtoAccount(acc).withdraw(amount)
 
-					if (bank.getAccounts().numtoAccount(acc).deposit(amount)==true)
-						view.printError("Successful deposited.");
+					if(result==true)
+						view.printError("Your transaction was succesful.");
 					else
-						view.printError("Sorry, the amount you enter must be positive");
+						view.printError("Your transaction failed.  Make sure the amount you entered was valid");	
 
-			}
+	
+					
+
+
+
+
+    	}
 		}
-    else if (choice == 3) {	//withdrawal
-    	
-			view.readAcctNum(acc);
-      
-			if (bank.getAccounts().accounttoBalance(acc)<0)
-					view.printError("Sorry, your account was not found");
-  		else{
-  				
-					view.readAmount(amount);
-					if (bank.getAccounts().numtoAccount(acc).withdraw(amount)==true)
-						view.printError("Successful withdrawal.");
-					else
-						view.printError("Sorry, the amount you entered was not valid. Make sure your amount is positive and you 						have a big enough balance to withdraw it");
-			}
-
-    }
     else {
       break;
     }
