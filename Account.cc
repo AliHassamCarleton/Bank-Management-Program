@@ -46,7 +46,7 @@ bool Account::withdraw(int amount){
 	if (amount<0)
 		return false;
 	else if (amount>balance)
-		return false
+		return false;
 	else{
 		balance-=amount;	
 		return true;

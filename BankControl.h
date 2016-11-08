@@ -28,6 +28,7 @@ class BankControl
   private:
     Bank bank;
     View view;
+		TransControl transControl;
     void init();
     void processAdmin();
     void processCust();

@@ -113,21 +113,18 @@ void BankControl::processCust()
 					view.readAmount(amount);
 
 					if (choice==2)//deposit
-						result= bank.getAccounts().numtoAccount(acc).deposit(amount);
+						result= bank.getAccounts().numtoAccount(acc)->deposit(amount);
 					else if (choice==3)//withdraw
-						result= bank.getAccounts().numtoAccount(acc).withdraw(amount)
+						result= bank.getAccounts().numtoAccount(acc)->withdraw(amount);
 
-					if(result==true)
+					if(result==true){
 						view.printError("Your transaction was succesful.");
-					else
+						Transaction* newTransaction;
+						newTransaction= new Transaction(acc,amount);
+						transControl.update(newTransaction);
+
+					}else
 						view.printError("Your transaction failed.  Make sure the amount you entered was valid");	
-
-	
-					Transaction* newTransaction;
-					newTransaction= new Transaction("", 
-
-
-
 
     	}
 		}
