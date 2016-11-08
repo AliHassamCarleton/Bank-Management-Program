@@ -18,6 +18,20 @@ TransArray::~TransArray()
 
 }
 
+void TransArray::toString(string& outStr){
+
+	for (int i=0; i<size; i++){
+
+
+
+
+
+
+	}
+
+
+}
+
 int TransArray::getSize() { return size; }
 
 Transaction* TransArray::get(int index)
