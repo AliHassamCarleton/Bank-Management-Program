@@ -20,7 +20,7 @@ TransArray::~TransArray()
 
 int TransArray::getSize() { return size; }
 
-TransArray* TransArray::get(int index)
+Transaction* TransArray::get(int index)
 {
   if (index < 0 || index >= size)
     exit(1);

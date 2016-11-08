@@ -11,11 +11,11 @@ TransControl::TransControl()
 }
 
 
-void update(Transaction* trans){
+void TransControl:: update(Transaction* trans){
 	
 	string date;
 	getTime(date);
-	trans->setDate(date)
+	trans->setDate(date);
 	transactions.add(trans);
 	
 
@@ -23,7 +23,7 @@ void update(Transaction* trans){
 
 
 
-void retrieve(TransArray& arr){
+void TransControl::retrieve(TransArray& arr){
 
 	arr=transactions;
 
