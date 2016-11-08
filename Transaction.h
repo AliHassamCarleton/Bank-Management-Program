@@ -20,12 +20,14 @@ public:
 	int getTransactionId();
 	string getDate();
 	void setDate(string);
-
-
+	TransType getTransType();
+	TransState getTransState();
 
 private:
 	string date;
 	int transId;
+	TransType transType;
+	TransState transState;
 	static int nextTransId;
 	int accountNum;
 	int amount;

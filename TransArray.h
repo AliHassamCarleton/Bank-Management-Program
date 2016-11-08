@@ -15,6 +15,7 @@ class TransArray
     ~TransArray();
     void add(Transaction*);
     Transaction* get(int);
+		void toString(string&);
     int getSize();
 
   private:

@@ -45,6 +45,7 @@ void BankControl::processAdmin()
   int      custId;
 	int 		 accountNum;
   AcctType acctType;
+	string tester;
 
   while (1) {
     choice = -1;
@@ -78,8 +79,8 @@ void BankControl::processAdmin()
     }     
     else if (choice == 5) { // print transactions
 			TransArray transArray;
-      //transControl.retrieve(transArray);
-			//transControl.transactions.toString(transArray);
+      transControl.retrieve(transArray);
+			transArray.toString(tester);
 			//view.printTransactions;
 
 
@@ -133,7 +134,7 @@ void BankControl::processCust()
 						view.printError("Your transaction failed.  Make sure the amount you entered was valid");
 
 					Transaction* newTransaction;
-					newTransaction= new Transaction(acc,amount,choice-1,result);
+					newTransaction= new Transaction(acc,amount,choice-2,result);
 					transControl.update(newTransaction);
 	
 

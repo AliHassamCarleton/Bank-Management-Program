@@ -30,14 +30,21 @@ void TransArray::toString(string& outStr){
 
 	for (int i=0; i<size; i++){
 		
-		oss<<elements[i]->getTransactionId()<< "  " <<elements[i]->getAccountNum()<< "  "<< elements[i]->getAmount() 
+		oss<<elements[i]->getTransactionId()<< "  " <<elements[i]->getAccountNum()<< "  "<< elements[i]->getAmount()<<"  " << elements[i]->getDate();
+		
+		if (elements[i]->getTransType==0)
+			oss<<" DEPOSIT       ";
+		else
+			oss<<" WITHDRAWAL    ";
 
-
-
-
+		if (elements[i]->getTransState==0)
+			oss<<" SUCCESSFUL ";
+		else
+			oss<<" FAILED  ";
 
 	}
 
+	outStr= oss.str();
 
 }
 
