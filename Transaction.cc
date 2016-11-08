@@ -6,15 +6,23 @@ int Transaction::nextTransId = 4000;
 
 Transaction::Transaction(int accnum, int am, int type, bool result){
 
+	TransType t;
+	TransState ts;
+
 	transId= nextTransId++;
 	accountNum= accnum;
 	amount= am;
-	TransType=type;
+
+	if(type==1)
+		t= WITHDRAWAL;
+	else
+		t= DEPOSIT;
+;
 
 	if (result==true)
-		TransState=1;
+		ts=SUCCESSFUL;
 	else
-		TransState=2;
+		ts=FAILED;
 		
 }
 

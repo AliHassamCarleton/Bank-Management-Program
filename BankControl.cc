@@ -77,9 +77,9 @@ void BankControl::processAdmin()
       view.pause();
     }     
     else if (choice == 5) { // print transactions
-			TransArray transArray;
-      transControl.retrieve(transArray);
-			view.printTransactions
+			//TransArray transArray;
+      //transControl.retrieve(transArray);
+			//view.printTransactions;
 
 
 
@@ -126,7 +126,7 @@ void BankControl::processCust()
 					else if (choice==3)//withdraw
 						result= bank.getAccounts().numtoAccount(acc)->withdraw(amount);
 
-					if(result==true){
+					if(result==true)
 						view.printError("Your transaction was succesful.");
 					else
 						view.printError("Your transaction failed.  Make sure the amount you entered was valid");

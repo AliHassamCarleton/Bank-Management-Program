@@ -11,14 +11,13 @@ TransControl::TransControl()
 }
 
 
-void TransControl:: update(Transaction* trans){
+void TransControl::update(Transaction* trans){
 	
 	string date;
 	getTime(date);
 	trans->setDate(date);
 	transactions.add(trans);
-	TransType
-
+	
 }
 
 
