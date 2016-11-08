@@ -21,6 +21,7 @@ class AcctList
     void del(int);
 		bool isExisting(int);
     float accounttoBalance(int);
+		Account* numtoAccount(int);
     void toString(string&);
 
   private:

@@ -111,7 +111,7 @@ void BankControl::processCust()
   		else{
   				
 					view.readAmount(amount);
-					bank.getAccounts().get
+					bank.getAccounts().numtoAccount(accountNum).deposit
 
 
 			}
