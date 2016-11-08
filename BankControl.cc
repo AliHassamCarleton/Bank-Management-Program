@@ -80,10 +80,7 @@ void BankControl::processAdmin()
     else if (choice == 5) { // print transactions
 			TransArray transArray;
       transControl.retrieve(transArray);
-			transArray.toString(tester);
-			//view.printTransactions;
-
-
+			view.printTransactions(transArray.toString());
 
       view.pause();
     }     

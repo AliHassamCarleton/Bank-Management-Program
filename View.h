@@ -28,6 +28,7 @@ class View
 		void readAcctNum(int&);
 		void readAmount(int&);
     void readAcctType(AcctType&);
+		void printTransactions(string);
     void printIdErr();
     void printAccounts(Bank&);
     void printCustomers(Bank&);

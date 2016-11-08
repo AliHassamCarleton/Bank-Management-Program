@@ -72,6 +72,17 @@ void View::custMenu(int& choice)
   }
 }
 
+
+void View::printTransactions(string strTrans){
+
+	cout << "The list of transactions made:";
+	cout<< strTrans;
+		
+}
+
+
+
+
 void View::printAccounts(Bank& bank)
 {
   // The stringstream class helps us convert from numeric values to string.
