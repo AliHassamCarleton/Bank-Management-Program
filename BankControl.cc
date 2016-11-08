@@ -85,9 +85,12 @@ void BankControl::processAdmin()
 void BankControl::processCust()
 {
   int choice;
+	int acc;
+	int amount;
 
   while (1) {
     choice = -1;
+		
     view.custMenu(choice);
     if (choice == 1) {	// check balance
     	
@@ -97,6 +100,36 @@ void BankControl::processCust()
 					view.printError("Sorry, your account was not found");
   		else
   				view.printBalance(bank.getAccounts().accounttoBalance(choice));
+
+    }
+    else if (choice == 2) {	//deposit
+    	
+			view.readAcctNum(acc);
+      
+			if (bank.getAccounts().accounttoBalance(acc)<0)
+					view.printError("Sorry, your account was not found");
+  		else{
+  				
+					view.readAmount(amount);
+					bank.getAccounts().get
+
+
+			}
+		}
+    else if (choice == 3) {	//withdrawal
+    	
+			view.readAcctNum(acc);
+      
+			if (bank.getAccounts().accounttoBalance(acc)<0)
+					view.printError("Sorry, your account was not found");
+  		else{
+  				
+					view.readAmount(amount);
+					
+
+
+			}
+
 
     }
     else {

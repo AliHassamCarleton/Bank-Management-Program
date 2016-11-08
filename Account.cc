@@ -30,4 +30,5 @@ int      Account::getAcctNum()  { return acctNum;  }
 int      Account::getCust()     { return cust;     }
 string 	 Account::getCustName() { return custName; }
 float    Account::getBalance()  { return balance;  }
+void     Account::depositBalance() {balance+=   }
 

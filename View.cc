@@ -62,9 +62,11 @@ void View::custMenu(int& choice)
 
   cout<< "\n\n\n                   BANKING SYSTEM CUSTOMER MENU\n\n";
   cout<< "          1. Check balance \n\n";
+	cout<< "          2. Deposit \n\n";
+	cout<< "          3. Withdrawal \n\n";
   cout<< "          0. Exit\n\n";
 
-  while (choice < 0 || choice > 1) {
+  while (choice < 0 || choice > 3) {
     cout << "Enter your selection:  ";
     choice = readInt();
   }
@@ -139,6 +141,16 @@ void View::readCustId(int& id)
   getline(cin, str);
   stringstream ss(str);
   ss >> id;
+}
+
+void View::readAmount(int& amount)
+{
+  string str;
+
+  cout << "Enter the Amount: ";
+  getline(cin, str);
+  stringstream ss(str);
+  ss >> amount;
 }
 
 

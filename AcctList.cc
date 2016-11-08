@@ -94,6 +94,21 @@ void AcctList::add(Account* acc)
 
 }
 
+Account* AcctList::numtoAccount(int accountNum){//accountnum to account
+	
+	Node* currNode;
+	currNode=head;
+
+	while(currNode!=NULL){
+		if(accountNum==currNode->data->getAcctNum()){
+				return currNode->data;
+		}
+		currNode=currNode->next;
+	}
+}
+
+
+
 bool AcctList::isExisting(int accountNum){
 
   Node* currNode;
