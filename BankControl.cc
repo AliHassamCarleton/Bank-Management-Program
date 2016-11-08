@@ -102,17 +102,21 @@ void BankControl::processCust()
   				view.printBalance(bank.getAccounts().accounttoBalance(choice));
 
     }
-    else if (choice == 2) {	//deposit
+    else if (choice == 2 ) {	//deposit
     	
 			view.readAcctNum(acc);
       
 			if (bank.getAccounts().accounttoBalance(acc)<0)
 					view.printError("Sorry, your account was not found");
   		else{
-  				
 					view.readAmount(amount);
-					bank.getAccounts().numtoAccount(accountNum).deposit
 
+					if (choice==2)
+
+					if (bank.getAccounts().numtoAccount(acc).deposit(amount)==true)
+						view.printError("Successful deposited.");
+					else
+						view.printError("Sorry, the amount you enter must be positive");
 
 			}
 		}
@@ -125,11 +129,11 @@ void BankControl::processCust()
   		else{
   				
 					view.readAmount(amount);
-					
-
-
+					if (bank.getAccounts().numtoAccount(acc).withdraw(amount)==true)
+						view.printError("Successful withdrawal.");
+					else
+						view.printError("Sorry, the amount you entered was not valid. Make sure your amount is positive and you 						have a big enough balance to withdraw it");
 			}
-
 
     }
     else {

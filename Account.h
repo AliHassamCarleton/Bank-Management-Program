@@ -26,8 +26,8 @@ class Account
     int        getCust();	
 		string		 getCustName();
     float      getBalance();
-		bool			 deposit();
-    bool       withdraw();
+		bool			 deposit(int);
+    bool       withdraw(int);
 
   protected:
     static int nextAcctNum;
