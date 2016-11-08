@@ -2,7 +2,7 @@
 #include "Transaction.h"
 using namespace std;
 
-int Account::nextTransId = 4000;
+int Transaction::nextTransId = 4000;
 
 Transaction::Transaction(int accnum, int am){
 

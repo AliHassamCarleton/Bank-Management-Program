@@ -1,4 +1,4 @@
-OBJ = main.o BankControl.o Bank.o Account.o View.o AcctList.o Customer.o CustArray.o
+OBJ = main.o BankControl.o Bank.o Account.o View.o AcctList.o Customer.o CustArray.o Transaction.o TransArray.o TransControl.o
 
 bsys:	$(OBJ)
 	g++ -o bsys $(OBJ)
@@ -6,7 +6,7 @@ bsys:	$(OBJ)
 main.o:	main.cc 
 	g++ -c main.cc
 
-BankControl.o:	BankControl.cc BankControl.h Bank.h View.h
+BankControl.o:	BankControl.cc BankControl.h TransControl.h Transaction.h Bank.h View.h
 	g++ -c BankControl.cc
 
 View.o:	View.cc View.h 
@@ -26,6 +26,17 @@ Customer.o:	Customer.cc Customer.h defs.h
 
 CustArray.o:	CustArray.cc CustArray.h Customer.h defs.h
 	g++ -c CustArray.cc
+
+TransArray.o:	TransArray.cc TransArray.h Transaction.h defs.h
+	g++ -c TransArray.cc
+
+Transaction.o:	Transaction.cc Transaction.h defs.h
+	g++ -c Transaction.cc
+
+TransControl.o:	TransControl.cc TransControl.h TransArray.h defs.h
+	g++ -c TransControl.cc
+
+
 
 clean:
 	rm -f $(OBJ) bsys
