@@ -12,7 +12,7 @@ Transaction::Transaction(string d, int tid, int accnum, int am){
 
 
 
-string   Transaction::getDate()          { return date;  					}
+void   	 Transaction::setDate(string d)  { date=d;  					}
 int      Transaction::getTransactionId() { return transId;    		}
 int      Transaction::getAccountNum()    { return accountNum;    	}
 int      Transaction::getAmount()    	 	 { return amount;    			}

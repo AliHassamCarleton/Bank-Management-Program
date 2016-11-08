@@ -12,11 +12,10 @@ TransControl::TransControl()
 
 
 void update(Transaction* trans){
-
+	
 	string date;
 	getTime(date);
-	
-	trans->
+	trans->setDate(date)
 	transactions.add(trans);
 	
 
@@ -27,8 +26,7 @@ void update(Transaction* trans){
 
 void retrieve(TransArray& arr){
 
-
-
+	arr=transactions;
 
 
 }
