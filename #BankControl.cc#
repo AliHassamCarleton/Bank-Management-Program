@@ -19,6 +19,18 @@ BankControl::BankControl()
   init();
 }
 
+BankControl::~BankControl(){
+
+  for (int i=0; i<bank.getCustomers().getSize(); i++){
+    delete bank.getCustomers().get(i);
+  }
+  for (int i=0; i<bank.getAccounts().getSize(); i++){
+    delete bank.getAccounts().get(i);
+  }
+
+
+}
+
 
 void BankControl::launch()
 {
@@ -43,25 +55,18 @@ void BankControl::processAdmin()
 {
   int      choice;
   int      custId;
-	int 		 accountNum;
   AcctType acctType;
 
   while (1) {
     choice = -1;
     view.adminMenu(choice);
-    if (choice == 1) {		// add account
+     if (choice == 1) {		// add account
        view.readCustId(custId);
-
-       if (bank.getCustomers().isExisting(custId)>-1){
-       		view.readAcctType(acctType);
-       		Account* newAccount;
-       		newAccount= new Account(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), acctType);
-       		bank.addAcct(newAccount);
-				}
-       else{
-					view.printIdErr();
-			 }
-       	view.pause();
+       view.readAcctType(acctType);
+       Account* newAccount;
+       newAccount= new Account(custId, acctType);
+       bank.addAcct(newAccount);
+       view.pause();
     }
     else if (choice == 2) {	// print accounts
       view.printAccounts(bank);
@@ -70,12 +75,7 @@ void BankControl::processAdmin()
     else if (choice == 3) { // print customers
       view.printCustomers(bank);
       view.pause();
-    }
-    else if (choice == 4) { // remove account
-      view.readAcctNum(accountNum);
-      bank.remAcct(accountNum);
-      view.pause();
-    }     
+    }    
     else {
       break;
     }
@@ -90,14 +90,8 @@ void BankControl::processCust()
     choice = -1;
     view.custMenu(choice);
     if (choice == 1) {	// check balance
-    	
-			view.readAcctNum(choice);
+    	view.accountToBalance(bank);
       
-			if (bank.getAccounts().accounttoBalance(choice)<0)
-					view.printError("Sorry, your account was not found");
-  		else
-  				view.printBalance(bank.getAccounts().accounttoBalance(choice));
-
     }
     else {
       break;
@@ -118,7 +112,7 @@ void BankControl::init()
   //Dynamically add the new customers
   newCustomer= new Customer(1001, "Timmy");
   bank.addCust(newCustomer);
-  newAccount= new Account(newCustomer, SAVINGS);
+  newAccount= new Account(newCustomer*, SAVINGS);
   bank.addAcct(newAccount);
 
 

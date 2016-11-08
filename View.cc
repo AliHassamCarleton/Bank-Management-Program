@@ -104,20 +104,6 @@ void View::printCustomers(Bank& bank)
   }
 }
 
-void View::accountToBalance(Bank& bank){
-
-  int choice;
-  float balance;
-
-  cout<< "Enter your account number"<< endl;
-  choice = readInt();
-
-  if (bank.getAccounts().accounttoBalance(choice)<0)
-	printError("Sorry, your account was not found");
-  else
-  	printBalance(bank.getAccounts().accounttoBalance(choice));
-
-}
 
 
 void View::printBalance(float b)

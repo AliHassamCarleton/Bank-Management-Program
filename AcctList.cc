@@ -12,7 +12,6 @@ AcctList::AcctList()
 {
   head= NULL;
   tail= NULL;
-  size=0;
 }
 
 AcctList::~AcctList()
@@ -55,6 +54,7 @@ void AcctList::del(int acctNum)
   if (currNode->next==NULL)
     tail=prevNode;
 
+  delete currNode->data;
   delete currNode;
 
 }
@@ -75,7 +75,7 @@ void AcctList::add(Account* acc)
   prevNode = NULL;
 
   while (currNode != NULL) {
-    if (acc->getAcctNum() < currNode->data->getAcctNum())
+    if (acc->getCust() < currNode->data->getCust())
       break;
     prevNode= currNode;
     currNode = currNode->next;
