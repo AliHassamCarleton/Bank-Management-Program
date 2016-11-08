@@ -1,6 +1,6 @@
  
-#ifndef TRANSACTION.H
-#define TRANSACTION.H
+#ifndef TRANSACTION_H
+#define TRANSACTION_H
 
 #include "defs.h"
 #include <string>

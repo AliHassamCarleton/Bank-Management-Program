@@ -1,12 +1,10 @@
- 
-#ifndef CUSTOMER.H
-#define CUSTOMER.H
+using namespace std; 
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
 
 #include "defs.h"
 #include <string>
 
-
-using namespace std;
 
 class Customer{
 
@@ -23,3 +21,5 @@ private:
 };
 
 #endif
+
+

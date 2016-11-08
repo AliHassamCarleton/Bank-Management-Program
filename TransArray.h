@@ -1,5 +1,5 @@
 
-#ifndef TRANSARRAY_H
+#ifndef TRANSARRAY_H 
 #define TRANSARRAY_H
 
 #include "defs.h"
