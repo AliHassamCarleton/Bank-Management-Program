@@ -123,7 +123,8 @@ void BankControl::processCust()
 						view.printError("Your transaction failed.  Make sure the amount you entered was valid");	
 
 	
-					
+					Transaction* newTransaction;
+					newTransaction= new Transaction("", 
 
 
 
