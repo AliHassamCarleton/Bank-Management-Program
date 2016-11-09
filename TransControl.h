@@ -12,6 +12,7 @@ class TransControl
 
 	public:
     TransControl();
+    ~TransControl();
 		void update(Transaction*); 
 		void retrieve(TransArray&); 
 		void getTime(string&); 

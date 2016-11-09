@@ -20,6 +20,7 @@ TransArray::~TransArray()
   for (int i=0; i<size; i++){
     delete elements[i];
   }
+	
 
 }
 
@@ -32,15 +33,15 @@ void TransArray::toString(string& outStr){
 		
 		oss<<elements[i]->getTransactionId()<< "  " <<elements[i]->getAccountNum()<< "  "<< elements[i]->getAmount()<<"  " << elements[i]->getDate();
 		
-		if (elements[i]->getTransType==0)
+		if (elements[i]->getTransType()==0)
 			oss<<" DEPOSIT       ";
 		else
 			oss<<" WITHDRAWAL    ";
 
-		if (elements[i]->getTransState==0)
-			oss<<" SUCCESSFUL ";
+		if (elements[i]->getTransState()==0)
+			oss<<" SUCCESSFUL \n";
 		else
-			oss<<" FAILED  ";
+			oss<<" FAILED     \n";
 
 	}
 

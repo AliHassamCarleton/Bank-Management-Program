@@ -17,6 +17,7 @@
 BankControl::BankControl()
 {
   init();
+
 }
 
 
@@ -80,7 +81,8 @@ void BankControl::processAdmin()
     else if (choice == 5) { // print transactions
 			TransArray transArray;
       transControl.retrieve(transArray);
-			view.printTransactions(transArray.toString());
+			transArray.toString(tester);
+			view.printTransactions(tester);
 
       view.pause();
     }     
@@ -133,7 +135,6 @@ void BankControl::processCust()
 					Transaction* newTransaction;
 					newTransaction= new Transaction(acc,amount,choice-2,result);
 					transControl.update(newTransaction);
-	
 
     	}
 		}

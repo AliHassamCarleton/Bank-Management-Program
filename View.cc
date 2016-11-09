@@ -45,10 +45,11 @@ void View::adminMenu(int& choice)
   cout<< "          1. Add account \n\n";
   cout<< "          2. Print accounts \n\n";
   cout<< "          3. Print customers \n\n";  
-  cout<< "          4. Remove account \n\n";  
+  cout<< "          4. Remove account \n\n";
+  cout<< "          5. Print transaction \n\n";  
   cout<< "          0. Exit\n\n";
 
-  while (choice < 0 || choice >4) {
+  while (choice < 0 || choice >5) {
     cout << "Enter your selection:  ";
     choice = readInt();
   }
@@ -75,7 +76,7 @@ void View::custMenu(int& choice)
 
 void View::printTransactions(string strTrans){
 
-	cout << "The list of transactions made:";
+	cout << "The list of transactions made:\n\n";
 	cout<< strTrans;
 		
 }

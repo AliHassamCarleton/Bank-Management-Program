@@ -7,7 +7,16 @@ using namespace std;
 
 TransControl::TransControl()
 {
-  //init();
+  
+
+
+}
+
+TransControl::~TransControl()
+{
+  
+	delete transactions;
+
 }
 
 

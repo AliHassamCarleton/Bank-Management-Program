@@ -4,6 +4,7 @@ using namespace std;
 
 int Transaction::nextTransId = 4000;
 
+
 Transaction::Transaction(int accnum, int am, int type, bool result){
 
 
