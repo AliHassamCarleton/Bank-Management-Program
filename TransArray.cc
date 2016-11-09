@@ -15,14 +15,15 @@ TransArray::TransArray()
   size = 0;
 }
 
-TransArray::~TransArray()
-{
-  for (int i=0; i<size; i++){
-    delete elements[i];
+
+void TransArray::funcDel(){
+
+ 	for (int i=0; i<size; i++){
+  	delete elements[i];
   }
-	
 
 }
+
 
 void TransArray::toString(string& outStr){
 

@@ -9,13 +9,13 @@ TransControl::TransControl()
 {
   
 
-
 }
 
 TransControl::~TransControl()
 {
   
-	delete transactions;
+	transactions.funcDel();
+	
 
 }
 

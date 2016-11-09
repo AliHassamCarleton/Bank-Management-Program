@@ -12,8 +12,8 @@ class TransArray
 {
   public:
     TransArray();
-    ~TransArray();
     void add(Transaction*);
+		void funcDel();
     Transaction* get(int);
 		void toString(string&);
     int getSize();
