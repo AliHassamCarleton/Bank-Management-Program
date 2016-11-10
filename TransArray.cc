@@ -1,3 +1,11 @@
+/*	Transcation Array Class
+
+The transaction array class holds the transactions.
+It has methods that return relevent information to ones that inherit it. Example: toString
+
+*/
+
+
 #include <string>
 #include <cstdlib>
 #include <iostream>

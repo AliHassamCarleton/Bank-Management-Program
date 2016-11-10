@@ -11,6 +11,14 @@
 /*                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/*	Bank Class
+
+The Transaction Control Class has the reponsibility of helping the Bank Control class to add and remove transactions.
+It has access to our Transaction Array class which stores the transactions itself.
+
+
+*/
+
 using namespace std;
 #include <iostream>
 #include <iomanip>

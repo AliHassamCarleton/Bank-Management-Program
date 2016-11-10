@@ -1,3 +1,11 @@
+/*	Transaction Class
+
+Defines what a transaction is and has the appropriate attributes.
+
+
+*/
+
+
 #include "defs.h"
 #include "Transaction.h"
 using namespace std;

@@ -1,15 +1,19 @@
+/*	Transaction Control Class
+
+The Transaction Control Class has the reponsibility of helping the Bank Control class to add and remove transactions.
+It has access to our Transaction Array class which stores the transactions itself.
+
+
+*/
+
+
 #include "TransControl.h"
 #include <iomanip>
 #include <ctime>
 #include <sstream>
 using namespace std;
- 
 
-TransControl::TransControl()
-{
-  
 
-}
 
 TransControl::~TransControl()
 {

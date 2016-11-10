@@ -11,6 +11,16 @@
 /*                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/*	Bank Control Class
+
+The main brains of the program responsible for calling all class that inherit from it.
+It then calls the "view" class to display information to the user.
+
+
+*/
+
+
+
 #include "BankControl.h"
 #include "Account.h"
 

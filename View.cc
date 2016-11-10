@@ -11,6 +11,15 @@
 /*                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/*	View Class
+
+Responsible for displaying appropraite information to the user.
+No real brains in this class, stritly used to print details.
+
+*/
+
+
+
 #include <iostream>
 #include <iomanip>
 #include <string>
