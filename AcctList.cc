@@ -1,3 +1,11 @@
+/*  Account List Class
+
+The Account List Class uses a linked list to store account objects
+It has access to the accounts themself.
+
+
+*/
+
 #include <iostream>
 #include <sstream> 
 #include <string>

@@ -13,8 +13,8 @@
 
 /*	Bank Class
 
-The Transaction Control Class has the reponsibility of helping the Bank Control class to add and remove transactions.
-It has access to our Transaction Array class which stores the transactions itself.
+The Bank Class has the reponsibility of helping the Bank Control class to add and remove Accounts and Customers.
+It has access to our Account List and Customer Array classes and which stores the information itself.
 
 
 */

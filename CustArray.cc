@@ -1,3 +1,11 @@
+/*  Customer Array Class
+
+The Customer Array Class uses an array to store customer objects
+It has access to the customers themself.
+
+
+*/
+
 #include <string>
 #include <cstdlib>
 using namespace std;

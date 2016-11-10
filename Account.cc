@@ -10,6 +10,13 @@
 /*  written consent of the author, is illegal.     */
 /*                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
+/*  Account Class
+
+The Account Class defines what an account itself is and has appropriate attributes.
+
+
+*/
+
 using namespace std;
 #include "defs.h"
 #include "Account.h"

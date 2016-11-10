@@ -1,3 +1,9 @@
+/*  Customer Class
+
+The Customer Class defines what an customer itself is and has appropriate attributes.
+
+
+*/
 #include "defs.h"
 #include "Customer.h"
 using namespace std;
