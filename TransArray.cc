@@ -32,7 +32,7 @@ void TransArray::toString(string& outStr){
 
 	for (int i=0; i<size; i++){
 		
-		oss<<elements[i]->getTransactionId()<< "  " <<elements[i]->getAccountNum()<< "  "<< elements[i]->getAmount()<<"  " << elements[i]->getDate();
+		oss<<"Transaction #: "<<elements[i]->getTransactionId()<< "    Account #: "<<elements[i]->getAccountNum()<< "    $"<< elements[i]->getAmount()<<"    " << 			elements[i]->getDate();
 		
 		if (elements[i]->getTransType()==0)
 			oss<<" DEPOSIT       ";
