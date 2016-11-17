@@ -36,6 +36,17 @@ Transaction.o:	Transaction.cc Transaction.h defs.h
 TransControl.o:	TransControl.cc TransControl.h TransArray.h defs.h
 	g++ -c TransControl.cc
 
+SavingsAcct.o:	SavingsAcct.cc SavingsAcct.h Account.h defs.h
+	g++ -c SavingsAcct.cc
+
+ChequingAcct.o:	ChequingAcct.cc ChequingAcct.h Account.h defs.h
+	g++ -c ChequingAcct.cc
+
+ChequingAcct.o:	ChequingAcct.cc ChequingAcct.h Account.h defs.h
+	g++ -c ChequingAcct.cc
+
+
+
 
 
 clean:
