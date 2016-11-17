@@ -10,8 +10,8 @@ class SavingsAcct{
 
 public:
   SavingsAcct(Customer* =NULL, AcctType= SAVINGS);
-	bool			 deposit(int);
-  bool       withdraw(int);
+	bool			 deposit(float);
+  bool       withdraw(float);
 private:
 	float interestRate;
 	float penaltyAmount;

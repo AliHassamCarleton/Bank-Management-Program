@@ -9,12 +9,12 @@ using namespace std;
 class ChequingAcct{
 
 public:
-	//SavingsAcct(int=0, string="");
-	//int getCustId();
-	//string getCustName();
+  ChequingAcct(Customer* =NULL, AcctType= CHEQUING);
+	bool			 deposit(float);
+  bool       withdraw(float);
 
 private:
-	int chequeCost;
+	float chequeCost;
 	
 
 

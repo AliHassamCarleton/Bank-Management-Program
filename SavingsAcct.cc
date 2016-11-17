@@ -2,10 +2,10 @@
 using namespace std;
 #include <string>
 
-#include "SavingsAccount.h"
+#include "SavingsAcct.h"
 
 
-SavingsAcct::SavingsAccount(Customer *c, AcctType t)
+SavingsAcct::SavingsAcct(Customer *c, AcctType t)
 : Account(c, t) 
 { 
 
@@ -15,10 +15,10 @@ SavingsAcct::SavingsAccount(Customer *c, AcctType t)
   
 }
 
-SavingsAccount::~SavingsAccount() { }
+SavingsAcct::~SavingsAcct() { }
 
 
-bool SavingsAccount::deposit(int amount){
+bool SavingsAcct::deposit(float amount){
 
 	if (amount<0){
 		return false;
@@ -29,7 +29,7 @@ bool SavingsAccount::deposit(int amount){
 
 }
 
-bool SavingsAccount::withdraw(int amount){
+bool SavingsAcct::withdraw(float amount){
 	
 	amount-= amount*penaltyAmount;
 

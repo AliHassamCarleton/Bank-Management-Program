@@ -2,22 +2,20 @@
 using namespace std;
 #include <string>
 
-#include "ChequingAcct.h"
+#include "GeneralAcct.h"
 
 
-ChequingAcct::ChequingAcct(Customer *c, AcctType t)
+GeneralAcct::GeneralAcct(Customer *c, AcctType t)
 : Account(c, t) 
 { 
-
-	chequeCost= 0.50;
 
   
 }
 
-ChequingAcct::~ChequingAcct() { }
+GeneralAcct::~GeneralAcct() { }
 
 
-bool ChequingAcct::deposit(int amount){
+bool GeneralAcct::deposit(float amount){
 
 	if (amount<0){
 		return false;
@@ -27,9 +25,8 @@ bool ChequingAcct::deposit(int amount){
 
 }
 
-bool ChequingAcct::withdraw(int amount){
+bool GeneralAcct::withdraw(float amount){
 	
-	amount+=chequeCost;
 
 	if (amount<0)
 		return false;
@@ -40,4 +37,3 @@ bool ChequingAcct::withdraw(int amount){
 		return true;
 	}
 }
-
