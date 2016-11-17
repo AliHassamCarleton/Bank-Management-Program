@@ -19,6 +19,9 @@ using namespace std;
 #include "Transaction.h"
 #include "Bank.h"
 #include "View.h"
+#include "ChequingAcct.h"
+#include "SavingsAcct.h"
+#include "GeneralAcct.h"
 
 class BankControl
 {

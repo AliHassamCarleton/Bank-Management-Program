@@ -42,8 +42,8 @@ SavingsAcct.o:	SavingsAcct.cc SavingsAcct.h Account.h defs.h
 ChequingAcct.o:	ChequingAcct.cc ChequingAcct.h Account.h defs.h
 	g++ -c ChequingAcct.cc
 
-ChequingAcct.o:	ChequingAcct.cc ChequingAcct.h Account.h defs.h
-	g++ -c ChequingAcct.cc
+GeneralAcct.o:	GeneralAcct.cc GeneralAcct.h Account.h defs.h
+	g++ -c GeneralAcct.cc
 
 
 
