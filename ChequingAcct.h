@@ -4,9 +4,11 @@ using namespace std;
 
 #include "defs.h"
 #include <string>
+#include "Account.h"
 
 
-class ChequingAcct{
+
+class ChequingAcct: public Account{
 
 public:
   ChequingAcct(Customer* =NULL, AcctType= CHEQUING);

@@ -4,9 +4,10 @@ using namespace std;
 
 #include "defs.h"
 #include <string>
+#include "Account.h"
 
 
-class GeneralAcct{
+class GeneralAcct: public Account{
 
 public:
   GeneralAcct(Customer* =NULL, AcctType= GENERAL);

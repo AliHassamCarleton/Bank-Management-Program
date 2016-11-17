@@ -3,10 +3,11 @@ using namespace std;
 #define SAVINGSACCT_H
 
 #include "defs.h"
+#include "Account.h"
 #include <string>
 
 
-class SavingsAcct{
+class SavingsAcct: public Account{
 
 public:
   SavingsAcct(Customer* =NULL, AcctType= SAVINGS);
