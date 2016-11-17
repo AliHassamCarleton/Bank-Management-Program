@@ -8,16 +8,38 @@ using namespace std;
 SavingsAccount::SavingsAccount(Customer *c, AcctType t)
 : Account(c, t) 
 { 
+
+  interestRate= 0.10;
+	penaltyAmount=0.05;
+
   
 }
 
 SavingsAccount::~SavingsAccount() { }
 
-void Bird::initMoves()
-{
-  moves[0] = "fly";
-  moves[1] = "flap wings";
-  moves[2] = "lay eggs";
-  numMoves = 3;
+
+bool SavingsAccount::deposit(int amount){
+
+	if (amount<0){
+		return false;
+	}
+	amount+= amount*interestRate;
+	balance+= amount;
+	return true;
+
+}
+
+bool SavingsAccount::withdraw(int amount){
+	
+	amount-= amount*penaltyAmount;
+
+	if (amount<0)
+		return false;
+	else if (amount>balance)
+		return false;
+	else{
+		balance-=amount;	
+		return true;
+	}
 }
 

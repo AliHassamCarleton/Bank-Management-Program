@@ -14,8 +14,8 @@ public:
 	//string getCustName();
 
 private:
-	int interestRate;
-	int penaltyAmount;
+	float interestRate;
+	float penaltyAmount;
 
 
 };
