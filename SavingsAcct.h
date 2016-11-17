@@ -9,10 +9,9 @@ using namespace std;
 class SavingsAcct{
 
 public:
-	//SavingsAcct(int=0, string="");
-	//int getCustId();
-	//string getCustName();
-
+  SavingsAcct(Customer* =NULL, AcctType= SAVINGS);
+	bool			 deposit(int);
+  bool       withdraw(int);
 private:
 	float interestRate;
 	float penaltyAmount;
