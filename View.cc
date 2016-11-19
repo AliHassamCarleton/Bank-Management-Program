@@ -164,7 +164,7 @@ void View::readCustId(int& id)
   ss >> id;
 }
 
-void View::readAmount(int& amount)
+void View::readAmount(float& amount)
 {
   string str;
 
