@@ -67,7 +67,14 @@ void BankControl::processAdmin()
        if (bank.getCustomers().isExisting(custId)>-1){
        		view.readAcctType(acctType);
        		Account* newAccount;
-       		newAccount= new Account(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), acctType);
+
+				  if (acctType==0)//cheq
+							newAccount= new ChequingAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 1);
+					else if(acctType==0)//sav
+							newAccount= new SavingsAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 0.5, 0.10);
+					else //general
+							newAccount= new GeneralAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)));
+
        		bank.addAcct(newAccount);
 				}
        else{
