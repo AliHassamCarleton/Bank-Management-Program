@@ -185,63 +185,63 @@ void BankControl::init()
 
   newCustomer= new Customer(1004, "John");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, CHEQUING);
+  newAccount= new ChequingAcct(newCustomer, 1);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1005, "Cena");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, CHEQUING);
+  newAccount= new ChequingAcct(newCustomer, 1);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1006, "Jasper");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, CHEQUING);
+  newAccount= new ChequingAcct(newCustomer, 1);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1007, "Eddie");
   bank.addCust(newCustomer);
-  newAccount= new GeneralAcct(newCustomer, GENERAL);
+  newAccount= new GeneralAcct(newCustomer);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1008, "Alec");
   bank.addCust(newCustomer);
-  newAccount= new GeneralAcct(newCustomer, GENERAL);
+  newAccount= new GeneralAcct(newCustomer);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1009, "Sameer");
   bank.addCust(newCustomer);
-  newAccount= new GeneralAcct(newCustomer, GENERAL);
+  newAccount= new GeneralAcct(newCustomer);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1010, "Ronaldo");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, SAVINGS);
+  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1011, "Howard");
   bank.addCust(newCustomer);
-  newAccount= new GeneralAcct(newCustomer, GENERAL);
+  newAccount= new GeneralAcct(newCustomer);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1012, "Ron");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, SAVINGS);
+  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1013, "Harry");
   bank.addCust(newCustomer);
-  newAccount= new GeneralAcct(newCustomer, GENERAL);
+  newAccount= new GeneralAcct(newCustomer);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1014, "Lilly");
   bank.addCust(newCustomer);
-  newAccount= new GeneralAccount(newCustomer, GENERAL);
+  newAccount= new GeneralAcct(newCustomer);
   bank.addAcct(newAccount);
 
 
   newCustomer= new Customer(1015, "Keiffer");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, CHEQUING);
+  newAccount= new ChequingAcct(newCustomer, 1);
   bank.addAcct(newAccount);
 
 

@@ -5,8 +5,8 @@ using namespace std;
 #include "GeneralAcct.h"
 
 
-GeneralAcct::GeneralAcct(Customer *c, AcctType t)
-: Account(c, t) 
+GeneralAcct::GeneralAcct(Customer *c)
+: Account(c, GENERAL) 
 { 
 
   

@@ -5,12 +5,12 @@ using namespace std;
 #include "SavingsAcct.h"
 
 
-SavingsAcct::SavingsAcct(Customer *c, AcctType t)
-: Account(c, t) 
+SavingsAcct::SavingsAcct(Customer *c, float i, float p)
+: Account(c, SAVINGS) 
 { 
 
-  interestRate= 0.10;
-	penaltyAmount=0.05;
+  interestRate= i;
+	penaltyAmount=p;
 
   
 }

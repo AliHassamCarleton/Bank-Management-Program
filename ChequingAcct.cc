@@ -5,11 +5,11 @@ using namespace std;
 #include "ChequingAcct.h"
 
 
-ChequingAcct::ChequingAcct(Customer *c, AcctType t)
-: Account(c, t) 
+ChequingAcct::ChequingAcct(Customer *c, float ch)
+: Account(c, CHEQUING) 
 { 
 
-	chequeCost= 0.50;
+	chequeCost= ch;
 
   
 }

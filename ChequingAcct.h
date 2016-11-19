@@ -11,7 +11,7 @@ using namespace std;
 class ChequingAcct: public Account{
 
 public:
-  ChequingAcct(Customer* =NULL, AcctType= CHEQUING);
+  ChequingAcct(Customer* =NULL, float=0);
 	bool			 deposit(float);
   bool       withdraw(float);
 

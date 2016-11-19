@@ -10,7 +10,7 @@ using namespace std;
 class GeneralAcct: public Account{
 
 public:
-  GeneralAcct(Customer* =NULL, AcctType= GENERAL);
+  GeneralAcct(Customer* =NULL);
 	bool			 deposit(float);
   bool       withdraw(float);
 
