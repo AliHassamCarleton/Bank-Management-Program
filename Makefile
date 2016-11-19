@@ -1,4 +1,4 @@
-OBJ = main.o BankControl.o Bank.o Account.o View.o AcctList.o Customer.o CustArray.o Transaction.o TransArray.o TransControl.o
+OBJ = main.o BankControl.o Bank.o Account.o View.o AcctList.o Customer.o CustArray.o Transaction.o TransArray.o TransControl.o SavingsAcct.o ChequingAcct.o GeneralAcct.o
 
 bsys:	$(OBJ)
 	g++ -o bsys $(OBJ)

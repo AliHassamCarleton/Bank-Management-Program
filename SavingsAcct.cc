@@ -15,7 +15,6 @@ SavingsAcct::SavingsAcct(Customer *c, float i, float p)
   
 }
 
-SavingsAcct::~SavingsAcct() { }
 
 
 bool SavingsAcct::deposit(float amount){

@@ -12,7 +12,6 @@ GeneralAcct::GeneralAcct(Customer *c)
   
 }
 
-GeneralAcct::~GeneralAcct() { }
 
 
 bool GeneralAcct::deposit(float amount){

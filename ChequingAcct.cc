@@ -14,10 +14,8 @@ ChequingAcct::ChequingAcct(Customer *c, float ch)
   
 }
 
-ChequingAcct::~ChequingAcct() { }
 
-
-bool ChequingAcct::deposit(int amount){
+bool ChequingAcct::deposit(float amount){
 
 	if (amount<0){
 		return false;
@@ -27,7 +25,7 @@ bool ChequingAcct::deposit(int amount){
 
 }
 
-bool ChequingAcct::withdraw(int amount){
+bool ChequingAcct::withdraw(float amount){
 	
 	amount+=chequeCost;
 
