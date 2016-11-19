@@ -70,8 +70,8 @@ void BankControl::processAdmin()
 
 				  if (acctType==0)//cheq
 							newAccount= new ChequingAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 1);
-					else if(acctType==0)//sav
-							newAccount= new SavingsAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 0.5, 0.10);
+					else if(acctType==1)//sav
+							newAccount= new SavingsAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 0.05, 0.10);
 					else //general
 							newAccount= new GeneralAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)));
 
@@ -176,18 +176,18 @@ void BankControl::init()
   //Dynamically add the new customers
   newCustomer= new Customer(1001, "Timmy");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, SAVINGS);
+  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
   bank.addAcct(newAccount);
 
 
   newCustomer= new Customer(1002, "Lebron");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, SAVINGS);
+  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1003, "James");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, SAVINGS);
+  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1004, "John");
