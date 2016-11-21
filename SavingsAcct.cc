@@ -30,7 +30,7 @@ bool SavingsAcct::deposit(float amount){
 
 bool SavingsAcct::withdraw(float amount){
 	
-	amount-= amount*penaltyAmount;
+	amount+= amount*penaltyAmount;
 
 	if (amount<0)
 		return false;
