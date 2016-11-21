@@ -19,6 +19,8 @@ class AcctList
     ~AcctList();
     void add(Account*);
     void del(int);
+    void  operator+=(Account*);
+    void  operator-=(int);
 		bool isExisting(int);
     float accounttoBalance(int);
 		Account* numtoAccount(int);

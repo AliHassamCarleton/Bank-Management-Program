@@ -170,39 +170,41 @@ void BankControl::init()
   */
   Customer* newCustomer;
   Account* newAccount;
-	
+	const float interestRate= 0.10;
+	const float penaltyAmount=0.05;
+	const float chequeCost=0.50;
 	
 
   //Dynamically add the new customers
   newCustomer= new Customer(1001, "Timmy");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
+  newAccount= new SavingsAcct(newCustomer, interestRate, penaltyAmount);
   bank.addAcct(newAccount);
 
 
   newCustomer= new Customer(1002, "Lebron");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
+  newAccount= new SavingsAcct(newCustomer, interestRate, penaltyAmount);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1003, "James");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
+  newAccount= new SavingsAcct(newCustomer, interestRate, penaltyAmount);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1004, "John");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, 1);
+  newAccount= new ChequingAcct(newCustomer, chequeCost);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1005, "Cena");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, 1);
+  newAccount= new ChequingAcct(newCustomer, chequeCost);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1006, "Jasper");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, 1);
+  newAccount= new ChequingAcct(newCustomer, chequeCost);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1007, "Eddie");
@@ -222,7 +224,7 @@ void BankControl::init()
 
   newCustomer= new Customer(1010, "Ronaldo");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
+  newAccount= new SavingsAcct(newCustomer, interestRate, penaltyAmount);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1011, "Howard");
@@ -232,7 +234,7 @@ void BankControl::init()
 
   newCustomer= new Customer(1012, "Ron");
   bank.addCust(newCustomer);
-  newAccount= new SavingsAcct(newCustomer, 0.05, 0.10);
+  newAccount= new SavingsAcct(newCustomer, interestRate, penaltyAmount);
   bank.addAcct(newAccount);
 
   newCustomer= new Customer(1013, "Harry");
@@ -248,7 +250,7 @@ void BankControl::init()
 
   newCustomer= new Customer(1015, "Keiffer");
   bank.addCust(newCustomer);
-  newAccount= new ChequingAcct(newCustomer, 1);
+  newAccount= new ChequingAcct(newCustomer, chequeCost);
   bank.addAcct(newAccount);
 
 

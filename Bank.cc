@@ -34,7 +34,7 @@ CustArray& Bank::getCustomers() { return customers; }
 void Bank::addAcct(Account *acct)
 {
   if ((customers.isExisting(acct->getCust()))>-1)	{
-  	accounts.add(acct);
+  	accounts+=acct;
   }
   else{
 		cout << "Sorry, your customer Id was not found  ";
@@ -46,7 +46,7 @@ void Bank::addAcct(Account *acct)
 void Bank::remAcct(int accountNum)
 {
   if (accounts.isExisting(accountNum)==true){
-  	accounts.del(accountNum);
+  	accounts-=accountNum;
   }
   else{
 	cout << "Sorry, your account number was not found  ";

@@ -37,6 +37,20 @@ AcctList::~AcctList()
   }
 }
 
+
+void AcctList::operator+=(Account* acc){
+
+  add(acc);
+
+}
+
+void AcctList::operator-=(int acctNum){
+
+  del(acctNum);
+
+}
+
+
 void AcctList::del(int acctNum)
 {
   Node* currNode = head;
