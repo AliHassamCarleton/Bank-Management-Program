@@ -31,9 +31,12 @@ class BankControl
   private:
     Bank bank;
     View view;
-		TransControl transControl;
+    TransControl transControl;
     void init();
     void processAdmin();
     void processCust();
+    float interestRate;
+		float penaltyAmount;
+	  float chequeCost;
 };
 #endif

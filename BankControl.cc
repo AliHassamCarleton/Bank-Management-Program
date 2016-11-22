@@ -26,6 +26,10 @@ It then calls the "view" class to display information to the user.
 
 BankControl::BankControl()
 {
+
+  interestRate= 0.10;
+  penaltyAmount=0.05;
+	chequeCost=0.50;
   init();
 
 }
@@ -69,9 +73,9 @@ void BankControl::processAdmin()
        		Account* newAccount;
 
 				  if (acctType==0)//cheq
-							newAccount= new ChequingAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 1);
+							newAccount= new ChequingAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), chequeCost);
 					else if(acctType==1)//sav
-							newAccount= new SavingsAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), 0.05, 0.10);
+							newAccount= new SavingsAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)), interestRate, penaltyAmount);
 					else //general
 							newAccount= new GeneralAcct(bank.getCustomers().get(bank.getCustomers().isExisting(custId)));
 
@@ -170,9 +174,6 @@ void BankControl::init()
   */
   Customer* newCustomer;
   Account* newAccount;
-	const float interestRate= 0.10;
-	const float penaltyAmount=0.05;
-	const float chequeCost=0.50;
 	
 
   //Dynamically add the new customers
