@@ -1,3 +1,11 @@
+/*  GeneralAcct Class
+
+The GeneralAcct Class overried the deposit and withdraw for the purpose of representing a general account 
+there is no pentalty or advantage to withdraw or deposit here
+
+
+*/
+
 #include <iostream>
 using namespace std;
 #include <string>

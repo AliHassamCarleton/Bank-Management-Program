@@ -1,3 +1,13 @@
+/*  SavingsAcct Class
+
+The SavingsAcct Class overried the deposit and withdraw for the purpose of representing a savings account 
+there is an advantage of depositing here but also a percentage pentaly to withdraw
+
+
+*/
+
+
+
 #include <iostream>
 using namespace std;
 #include <string>

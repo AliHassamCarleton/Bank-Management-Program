@@ -12,7 +12,9 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
 /*  Account Class
 
-The Account Class defines what an account itself is and has appropriate attributes.
+The Account Class defines what an account itself and is now abstract.
+The deposit and withdrawal are pure virtual
+SavingsAcct, ChequingAcct and GeneralAcct inheret from it
 
 
 */

@@ -1,3 +1,11 @@
+/*  ChequingAcct Class
+
+The ChequingAcct Class overried the deposit and withdraw for the purpose of representing a chequing account 
+there is no advantage to depositing here but only a cost of withdrawing
+
+
+*/
+
 #include <iostream>
 using namespace std;
 #include <string>

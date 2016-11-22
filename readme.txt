@@ -4,7 +4,7 @@ Alnoor Kara
 
 purpose:
 
-The purpose is to modify our existing bank management program using object oriented programming. For this assignment we deal with designing and implementing a transaction control class, a transaction array and defining what a transaction itself is.  The program with these features essentially now has the ability to allow the user to deposit or withdraw money from accounts and display the transactions performed.
+The purpose is to modify our existing bank management program using object oriented programming. For this assignment we deal with creating a hierarchy of bank account classes with polymorphic functions.  There is also an implementation of overloaded operators on the collection class and this program now take advantage an inheritance hierarchy with polymorphism
 
 
 Source/Header/Data files:
@@ -18,6 +18,9 @@ Customer.h
 Transaction.h
 TransArray.h
 TransControl.h
+ChequingAcct.h
+SavingsAcct.h
+GeneralAcct.h
 <iostream>
 <iomanip>
 <string>
