@@ -20,5 +20,27 @@ void Subject::subscribe(Observer* obs){
   elements[size++] = obs;
 
 
+}
+
+bool Subject::unsubscribe(Observer* obs){
+	
+
+	for (int i=0; i<size; i++){
+		
+		if (elements[i]==obs){
+				delete elements[i];
+				break;
+		}	
+		
+	}
+
+	if(i==size)
+		return false;//not found
+	
+	for(int c=i; c<size-1; c++){
+		
+		elements[c]= elements[c+1];
+
+	}
 
 }
