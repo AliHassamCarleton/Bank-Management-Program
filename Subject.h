@@ -8,7 +8,7 @@ class Subject
 {
 	public:
     void subscribe(Observer*);
-		void unsubscribe(Observer*);
+		bool unsubscribe(Observer*);
     void notify();
 
 	private:
