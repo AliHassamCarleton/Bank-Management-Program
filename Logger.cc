@@ -3,6 +3,12 @@ using namespace std;
 #include "BankControl.h"
 #include "Transaction.h"
 
+Logger::Loger():Subject(){
+
+
+}
+
+
 
 void Logger::update(){
 	

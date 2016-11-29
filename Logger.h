@@ -7,7 +7,9 @@ using namespace std;
 class Logger
 {
 	public:
+		Logger();
     void update();
+		
 
 	private:
 		TransArray flaggedTrans;
