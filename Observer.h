@@ -4,11 +4,12 @@ using namespace std;
 
 #include "defs.h"
 
-class Obersver
+class Observer
 {
 
 	public:
 		virtual bool update(float)  = 0;
+
 
 
 

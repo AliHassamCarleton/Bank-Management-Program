@@ -1,8 +1,7 @@
-/*	Subject Class
+using namespace std;
+#include "Observer.h"
+#include "Subject.h"
 
-
-
-*/
 
 Subject::Subject()
 {
