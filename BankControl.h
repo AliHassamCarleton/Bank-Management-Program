@@ -16,6 +16,7 @@ using namespace std;
 
 #include <string>
 #include "TransControl.h"
+#include "Logger.h"
 #include "Transaction.h"
 #include "Bank.h"
 #include "View.h"
@@ -37,6 +38,10 @@ class BankControl
     void processCust();
     float interestRate;
 		float penaltyAmount;
+		Transaction* getLastTrans;
 	  float chequeCost;
+		Logger logger;
+		Transaction *lastTrans;
+
 };
 #endif

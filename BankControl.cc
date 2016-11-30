@@ -24,7 +24,7 @@ It then calls the "view" class to display information to the user.
 #include "BankControl.h"
 #include "Account.h"
 
-BankControl::BankControl()
+BankControl::BankControl():Subject
 {
 
   interestRate= 0.10;
@@ -155,6 +155,9 @@ void BankControl::processCust()
 
 					Transaction* newTransaction;
 					newTransaction= new Transaction(acc,amount,choice-2,result);
+					lastTrans= newTransaction;
+					logger.update();
+					
 					transControl.update(newTransaction);
 
     	}
@@ -163,6 +166,12 @@ void BankControl::processCust()
       break;
     }
   }
+}
+
+Transaction* BankControl::getLastTrans(){
+	
+	return lastTrans;
+
 }
 
 void BankControl::init()

@@ -3,7 +3,7 @@ using namespace std;
 #include "BankControl.h"
 #include "Transaction.h"
 
-Logger::Loger():Subject(){
+Logger::Loger():Observer(){
 
 
 }
@@ -13,8 +13,9 @@ Logger::Loger():Subject(){
 void Logger::update(){
 	
 	//retrieve last transaction
+	Transaction *lastTrans= bankControl->getLastTrans();
 	
-	if(amount>1000)
+	if(lastTrans->getAmount()>1000)
 		flaggedTrans.add(lastTrans);
 
 
