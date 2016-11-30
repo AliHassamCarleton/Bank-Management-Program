@@ -11,7 +11,12 @@ Subject::Subject()
 
 
 
-void Subject::subscribe(Observer* obs){
+void Subject::subscribe(){
+	
+	Observer* obs;
+	obs= new Observer();
+	
+	//obs.update();
 
 	if (size >= MAX_ARR)
    	return;
@@ -21,7 +26,7 @@ void Subject::subscribe(Observer* obs){
 
 }
 
-bool Subject::unsubscribe(Observer* obs){
+bool Subject::unsubscribe(){
 	
 
 	for (int i=0; i<size; i++){

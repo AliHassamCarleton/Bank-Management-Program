@@ -7,8 +7,8 @@ using namespace std;
 class Subject
 {
 	public:
-    void subscribe(Observer*);
-		bool unsubscribe(Observer*);
+    void subscribe();
+		bool unsubscribe();
     void notify();
 
 	private:

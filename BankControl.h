@@ -23,6 +23,7 @@ using namespace std;
 #include "ChequingAcct.h"
 #include "SavingsAcct.h"
 #include "GeneralAcct.h"
+#include "Subject.h"
 
 class BankControl
 {

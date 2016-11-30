@@ -156,8 +156,8 @@ void BankControl::processCust()
 					Transaction* newTransaction;
 					newTransaction= new Transaction(acc,amount,choice-2,result);
 					lastTrans= newTransaction;
-					logger.update();
-					
+					//logger.update();
+					elements.subscribe();
 					transControl.update(newTransaction);
 
     	}
