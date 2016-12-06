@@ -21,3 +21,9 @@ void Logger::update(){
 
 }
 
+void Logger::getFlagTrans(TransArray& transArr){
+
+		transArr=flaggedTrans;
+
+}
+

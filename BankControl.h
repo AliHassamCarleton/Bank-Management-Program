@@ -30,6 +30,7 @@ class BankControl
   public:
     BankControl();
     void launch();
+		Transaction* getLastTrans();
   private:
     Bank bank;
     View view;
@@ -39,9 +40,8 @@ class BankControl
     void processCust();
     float interestRate;
 		float penaltyAmount;
-		Transaction* getLastTrans;
 	  float chequeCost;
-		Logger logger;
+		Logger* logger;
 		Transaction *lastTrans;
 
 };

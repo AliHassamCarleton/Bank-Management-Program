@@ -27,11 +27,23 @@ It then calls the "view" class to display information to the user.
 BankControl::BankControl():Subject
 {
 
+
+  logger = new Logger(this);
+  subscribe(logger);
+  init();
   interestRate= 0.10;
   penaltyAmount=0.05;
-	chequeCost=0.50;
+  chequeCost=0.50;
   init();
 
+}
+
+BankControl::~BankControl() {
+  for (int i=0; i<bank.getCustomers().getSize(); i++){
+    delete bank.getCustomers().get(i);
+  }
+
+  delete logger;
 }
 
 
